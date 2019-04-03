@@ -1,6 +1,8 @@
-# zambrano-ibarra-jorge-luisjpM
+# zambrano-ibarra-jorge-luisjpMQ
+# zambrano-ibarra-jorge-luisjpq
 Cambio 1.1.1
 Cambio 2
 Cambio 3
 Juanita 1
-s
+Restar negativos
+
