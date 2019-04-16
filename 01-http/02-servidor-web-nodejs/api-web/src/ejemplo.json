@@ -1,0 +1,8 @@
+[{
+  "nombre": "jorge",
+  "edad": 25,
+  "sueldo": 10.21,
+  "casado": false,
+  "hijos": null,
+  "mascotas": ["cachetas",1,1.1,false,null, {"nombre": "cachetes"}]
+}]
