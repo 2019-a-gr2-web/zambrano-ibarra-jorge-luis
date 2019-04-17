@@ -1,8 +1,9 @@
-import {Controller, Delete, Get, Header, HttpCode, Post, Put, Headers} from '@nestjs/common';
+import {Controller, Delete, Get, Header, HttpCode, Post, Put, Headers, Query, Param, Body, Request, Response} from '@nestjs/common';
 import { AppService } from './app.service';
-import {HEADERS_METADATA} from '@nestjs/common/constants';
 
 // http://192.168.1.10:3000''/mascotas/crear
+// @ts-ignore
+// @ts-ignore
 @Controller('/api')
 export class AppController {
   constructor(private readonly appService: AppService) {}
@@ -36,6 +37,62 @@ export class AppController {
 
       return 'ok';
   }
+  @Get('/consultar')
+   consultar(@Query() queryParams){
+      console.log(queryParams)
+      if (queryParams.nombre){
+
+          return `Hola ${queryParams.nombre}`
+
+      }else{
+          return 'Hola extraño'
+      }
+  }
+    @Get('/ciudad/:idCiudad')
+    ciudad(@Param() parametrosRuta){
+        console.log(parametrosRuta);
+        switch (parametrosRuta.idCiudad.toLowerCase()){
+            case 'quito':
+                return 'Que fueff';
+            case 'manabi':
+                return 'Haaaabla bieeeen ';
+            default:
+                return 'Buenas tardes'
+        }
+    }
+    @Post('registroComida')
+    registroComida(@Body() parametrosCuerpo, @Response() response){
+
+      console.log(parametrosCuerpo);
+      if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
+          const cantidad= Number(parametrosCuerpo.cantidad);
+          if (cantidad>1) {
+              response.set('Premio', 'Fanesca');
+          }
+          return response.send({mensaje: 'Registro Creado'})
+      }else{
+          return response.status(400)
+              .send({
+                      mensaje:'ERROR, no envia nombre o cantidad',
+                  error: 400
+              });
+      }
+
+
+    }
+    @Get('/semilla')
+    semilla(@Request() request) {
+        console.log(request.cookies);
+        const cookies = request.cookies;
+        if(cookies.micookie){
+            return 'ok';
+        }else{
+            return':c';
+        }
+        return 'Ok';
+    }
+
+
 
 }
 /*
