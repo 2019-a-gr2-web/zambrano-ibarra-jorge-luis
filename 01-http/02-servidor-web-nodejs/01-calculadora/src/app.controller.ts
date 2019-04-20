@@ -70,7 +70,7 @@ export class AppController {
       return response.status(203).send(`La division es: ${division}`);
     }
     }else {
-      //return response.status(400).send("Error al ingresar los numeros");
+      return response.status(400).send("Error al ingresar los numeros");
     }
 
   }
