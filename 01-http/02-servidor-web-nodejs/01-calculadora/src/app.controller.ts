@@ -1,4 +1,4 @@
-import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query, Delete} from '@nestjs/common';
+import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query, Delete, Response, Request, Body} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('/calculadora')
@@ -16,37 +16,63 @@ export class AppController {
     console.log('Headers', headers);
     const numero1 = Number(headers.numero1);
     const numero2 = Number(headers.numero2);
-    const suma= numero1+numero2;
-    return `La suma es: ${suma}`;
+
+    if (/^([0-9])*$/.test(numero1.toString())&&/^([0-9])*$/.test(numero2.toString())){
+      const suma= numero1+numero2;
+      return `La suma es: ${suma}`;
+    }else {
+      return "Error al ingresar los numeros";
+    }
+
   }
 
-  @Post('/resta/:numero/:numero1')
-  @HttpCode(201)
-  restaJorge(@Param() parametrosRuta): string {
+  @Post('/resta')
 
-    const numero1 = Number(parametrosRuta.numero);
-    const numero2 = Number(parametrosRuta.numero1);
-    const resta= numero1-numero2;
-    return `La resta es: ${resta}`;
+  restaJorge(@Body() parametrosCuerpo, @Response() response): string {
+    const numero1 = Number(parametrosCuerpo.numero1);
+    const numero2 = Number(parametrosCuerpo.numero2);
+    if (/^([0-9])*$/.test(numero1.toString())&&/^([0-9])*$/.test(numero2.toString())){
+      const resta= numero1-numero2;
+      response.set('Resta', `${resta}`);
+      return response.status(201).send(`La resta es: ${resta}`);
+    }else {
+      return response.status(400).send("Error al ingresar los numeros");
+    }
+
   }
 
   @Put('/multiplicacion')
-  @HttpCode(202)
-  multiJorge(@Query() parametrosQuery): string {
+  multiJorge(@Query() parametrosQuery, @Response() response): string {
 
     const numero1 = Number(parametrosQuery.numero1);
     const numero2 = Number(parametrosQuery.numero2);
-    const mult= numero1*numero2;
-    return `La multiplicacion es: ${mult}`;
+    if (/^([0-9])*$/.test(numero1.toString())&&/^([0-9])*$/.test(numero2.toString())){
+      const mult= numero1*numero2;
+      response.set('Multiplicacion', `${mult}`);
+      return response.status(202).send(`La multiplicacion es: ${mult}`);
+    }else {
+      return response.status(400).send("Error al ingresar los numeros");
+    }
+
+
   }
   @Delete('/division')
-  @HttpCode(203)
-  division(@Query() parametrosQuery, @Headers() headers): string {
+  division(@Query() parametrosQuery, @Headers() headers, @Response() response): string {
 
     const numero1 = Number(headers.numero1);
     const numero2 = Number(parametrosQuery.numero2);
-    const division= numero1/numero2;
-    return `La division es: ${division}`;
+    if (/^([0-9])*$/.test(numero1.toString())&&/^([0-9])*$/.test(numero2.toString())) {
+      if (numero2 == 0) {
+        return response.status(400).send("No se puede dividir para 0");
+      } else {
+      const division = numero1 / numero2;
+      response.set('Division', `${division}`);
+      return response.status(203).send(`La division es: ${division}`);
+    }
+    }else {
+      return response.status(400).send("Error al ingresar los numeros");
+    }
+
   }
 
 
