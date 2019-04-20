@@ -1,4 +1,4 @@
-import { Controller, Get, Headers, HttpCode, Post, Param} from '@nestjs/common';
+import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('/calculadora')
@@ -28,6 +28,16 @@ export class AppController {
     const numero2 = Number(parametrosRuta.numero1);
     const resta= numero1-numero2;
     return `La resta es: ${resta}`;
+  }
+
+  @Put('/multiplicacion')
+  @HttpCode(202)
+  multiJorge(@Query() parametrosQuery): string {
+
+    const numero1 = Number(parametrosQuery.numero1);
+    const numero2 = Number(parametrosQuery.numero2);
+    const mult= numero1*numero2;
+    return `La multiplicacoin es: ${mult}`;
   }
   
 }
