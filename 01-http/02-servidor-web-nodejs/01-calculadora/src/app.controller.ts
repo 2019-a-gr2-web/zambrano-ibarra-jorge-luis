@@ -1,4 +1,4 @@
-import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query} from '@nestjs/common';
+import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query, Delete} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('/calculadora')
@@ -37,7 +37,17 @@ export class AppController {
     const numero1 = Number(parametrosQuery.numero1);
     const numero2 = Number(parametrosQuery.numero2);
     const mult= numero1*numero2;
-    return `La multiplicacoin es: ${mult}`;
+    return `La multiplicacion es: ${mult}`;
   }
-  
+  @Delete('/division')
+  @HttpCode(203)
+  division(@Query() parametrosQuery, @Headers() headers): string {
+
+    const numero1 = Number(headers.numero1);
+    const numero2 = Number(parametrosQuery.numero2);
+    const division= numero1/numero2;
+    return `La division es: ${division}`;
+  }
+
+
 }
