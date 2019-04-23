@@ -1,6 +1,7 @@
 import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query, Delete, Response, Request, Body} from '@nestjs/common';
 import { AppService } from './app.service';
-
+import * as Joi from '@hapi/joi';
+const Joi= require('@hapi/joi');
 @Controller('/calculadora')
 export class AppController {
   constructor(private readonly appService: AppService) {}
@@ -72,7 +73,6 @@ export class AppController {
     }else {
       return response.status(400).send("Error al ingresar los numeros");
     }
-
   }
 
 
