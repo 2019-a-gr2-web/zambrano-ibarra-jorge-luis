@@ -10,7 +10,6 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-
   @Get('/suma')
   @HttpCode(200)
   sumaJorge(@Headers() headers, @Response() response, @Request() request): string {
@@ -43,9 +42,7 @@ export class AppController {
 
 
   }
-
   @Post('/resta')
-
   restaJorge(@Body() parametrosCuerpo, @Response() response, @Request() request): string {
     const cookie = request.cookies;
     response.cookie('usuario', 'Jorge Zambrano Resta');
@@ -65,7 +62,6 @@ export class AppController {
     };
     const resultado = Joi.validate(objetoVladicacion, esquemaValidacionNumero);
     if (resultado.error) {
-
       return response.send("Error: Ingrese solo numeros");
     } else {
       const resta= numero1-numero2;

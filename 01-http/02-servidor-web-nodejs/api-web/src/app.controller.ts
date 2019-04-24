@@ -105,6 +105,7 @@ export class AppController {
         }else{
             console.log('No es valida esta cookie');
         }
+        if(cookies.micookie){
         const horafechaServidor= new Date();
         const minutos = horafechaServidor.getMinutes();
         horafechaServidor.setMinutes(minutos+1);
@@ -118,6 +119,10 @@ export class AppController {
             return response.send(':c');
         }
         //return 'Ok';
+    }
+    @Get('/inicio')
+    inicio(@Response() res){
+      return res.render('inicio')
     }
 
 
@@ -165,3 +170,154 @@ objeto.propiedadTres = 'valor3';
 objeto['propiedadTres']= 'valor 3';
 delete objeto.propiedadTres;
 objeto.propiedadTres=undefined;
+
+
+function holaMundo(){
+    console.log('Hola mundo');
+}
+const respuestHolaMundo= holaMundo();
+console.log('Resp hola mundo: ', respuestHolaMundo);
+
+function suma(a:number,b:number):number{
+   return a+b;
+}
+const respuestaSuma= suma(1,2);
+console.log('Resp suma: ', respuestaSuma);
+//condicionales
+//truty
+//falsy
+if(true){//truty
+    console.log('verdadero');
+}else{
+    console.log('falso');
+}
+
+if(""){//falsy
+    console.log('verdadero');
+}else{
+    console.log('falso "" ');
+}
+if("a"){//truty
+    console.log('verdadero "a"');
+}else{
+    console.log('falso "a" ');
+}
+
+if(0){//falsy
+    console.log('verdadero "0"');
+}else{
+    console.log('falso "0" ');
+}
+
+if("0"){//truty
+    console.log('verdadero "0"');
+}else{
+    console.log('falso "0" ');
+}
+
+if("-1"){//truty
+    console.log('verdadero "0"');
+}else{
+    console.log('falso "0" ');
+}
+
+if("1"){//falsy
+    console.log('verdadero "0"');
+}else{
+    console.log('falso "0" ');
+}
+
+if(undefined){//falsy
+    console.log('verdadero undef');
+}else{
+    console.log('falso undef ');
+}
+
+if(null){//falsy
+    console.log('verdadero null');
+}else{
+    console.log('falso null ');
+}
+
+if({}){//truty
+    console.log('verdadero "{}"');
+}else{
+    console.log('falso "{}" ');
+}
+
+//operadores de arreglos
+ //los arreglos pueden tener lo que sea
+     const arreglo= [
+         function () {return 'o'},
+         1,
+         'C',
+         true,
+         {},
+         []
+     ];
+const arreglosNumeros = [1,2,3,4,5,6];
+// 1) imprimir en consola todos los elementos
+// 2) sume dos a los pares y 1 a los impares
+// 3) encuentre si hay el numero 4
+// 4) filtren los números menores a 5
+// 5) todos los valores positivos
+// 6) algun valor menor a 2
+// 7) sumen todos los valores
+// 8) resten todos los valores de 100
+
+//1.1) sumen 10 a todos
+//1.2) filtren a los mayores a 15
+//1.3) si hay algún numero mayor a 30 (true or false)
+const arreglosNumerosForEach = [1,2,3,4,5,6];
+
+const rforeach= arreglosNumerosForEach.forEach(function (valorActual,indice,arreglo) {
+       console.log(`Valor: ${valorActual}`);
+       console.log(`Indice: ${indice}`);
+        console.log(`Arreglo: ${arreglo}`);
+    });
+
+//1)
+const r2foreach= arreglosNumerosForEach.forEach((arreglo)=>
+
+    console.log(`Arreglo: ${arreglo}`)
+);
+
+
+
+//2
+const arreglosNumerosMap= [1,2,3,4,5,6];
+const rMap=arreglosNumerosMap
+    .map(//devolver el nuevo valor de ese elemento
+        (valorActual) => {
+            const esPar = valorActual%2==0;
+            if(esPar){
+                const nuevoValor = valorActual+2;
+                return nuevoValor;
+            } else{
+                const nuevoValor = valorActual+1;
+                return nuevoValor;
+            }
+        }
+        );
+console.log(`Respuesta Map: ${rMap}`);
+//3)
+const arreglosNumerosFind= [1,2,3,4,5,6];
+const rFind = arreglosNumerosFind.
+find(
+    (valorActual)=>{
+    return valorActual==4;
+
+}
+
+);
+console.log(`Respuesta Find: ${rFind}`);
+//4)
+const arreglosNumerosFilter= [1,2,3,4,5,6];
+const rFilter=arreglosNumerosFilter.
+filter(
+    (valorActual)=>{
+        return valorActual<5;
+    }
+
+);
+console.log(`Respuesta Filter: ${rFilter}`);
