@@ -105,7 +105,6 @@ export class AppController {
         }else{
             console.log('No es valida esta cookie');
         }
-        if(cookies.micookie) {
         const horafechaServidor= new Date();
         const minutos = horafechaServidor.getMinutes();
         horafechaServidor.setMinutes(minutos+1);
