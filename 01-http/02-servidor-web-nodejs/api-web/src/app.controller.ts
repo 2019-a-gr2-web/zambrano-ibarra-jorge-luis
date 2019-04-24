@@ -321,3 +321,4 @@ filter(
 
 );
 console.log(`Respuesta Filter: ${rFilter}`);
+//45 casi se daña
