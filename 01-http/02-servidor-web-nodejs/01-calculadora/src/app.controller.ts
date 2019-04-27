@@ -2,7 +2,11 @@ import { Controller, Get, Headers, HttpCode, Post, Param, Put, Query, Delete, Re
 import { AppService } from './app.service';
 import * as Joi from '@hapi/joi';
 import {catchError} from "rxjs/operators";
+import {printLine} from "tslint/lib/verify/lines";
+
 @Controller('/calculadora')
+
+
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
@@ -10,12 +14,24 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
   @Get('/suma')
+
   @HttpCode(200)
   sumaJorge(@Headers() headers, @Response() response, @Request() request): string {
-    const cookie = request.cookies;
-    response.cookie('usuario', 'Jorge Zambrano Suma');
-    console.log('Headers', headers);
+      const cookie2 = request.signedCookies;
+      if(!cookie2.intento){
+          response.cookie('intento', 100, {signed: true});
+          console.log("COOKIE2: ",cookie2);
+      }
+      response.cookie('usuario', 'Jorge Zambrano Suma');
+
+      const cookie1 = request.cookies;
+
+
+      console.log("COOKIE1: ",cookie1);
+
+      console.log('Headers', headers);
     const numero1 = Number(headers.numero1);
     const numero2 = Number(headers.numero2);
     const esquemaValidacionNumero = Joi
@@ -33,8 +49,25 @@ export class AppController {
 
       return response.send("Error: Ingrese solo numeros");
     } else {
-      const suma = numero1 + numero2;
-      return response.send({'resultado: ': `La suma es: ${suma}`, 'usuario: ': cookie.usuario});
+
+
+
+           if (resul<=0) {
+               return response.send({
+                   'resultado: ': `Resutlado: ${resul}`,
+                   'usuario: ': cookie1.usuario,
+                   'mensaje: ': 'Se le terminaron los puntos'
+               });
+           }else{
+                //console.log(cookie2.intento);
+                //resul= cookie2 - (numero1+ numero2);
+                return response.send({
+                'resultado: ': `Resutlado: ${resul}`,
+                'usuario: ': cookie2.intento
+
+           });
+       }
+
     }
 
 
@@ -137,7 +170,17 @@ export class AppController {
 
 
   }
+
 //cambiar nombre de commit
-  
+
 
 }
+var resul=1;
+var get_cookies = function(request) {
+    var cookies = {};
+    request.headers && request.headers.cookie.split(';').forEach(function(cookie) {
+        var parts = cookie.match(/(.*?)=(.*)$/)
+        cookies[ parts[1].trim() ] = (parts[2] || '').trim();
+    });
+    return cookies;
+};
