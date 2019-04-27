@@ -112,7 +112,8 @@ export class AppController {
             response.cookie('fechaServidor', new Date().getTime(),
                 {
                     //expires: horafechaServidor
-                    signed: true
+                    signed: true,
+                    secure: true
                 });
             return response.send('ok');
         }else{
@@ -281,9 +282,6 @@ const r2foreach= arreglosNumerosForEach.forEach((arreglo)=>
 
     console.log(`Arreglo: ${arreglo}`)
 );
-
-
-
 //2
 const arreglosNumerosMap= [1,2,3,4,5,6];
 const rMap=arreglosNumerosMap
