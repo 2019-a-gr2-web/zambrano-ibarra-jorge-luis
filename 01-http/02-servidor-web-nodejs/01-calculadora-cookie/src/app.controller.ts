@@ -5,7 +5,6 @@ import * as Joi from '@hapi/joi';
 @Controller('calculadora')
 export class AppController {
   constructor(private readonly appService: AppService) {}
-    //  -------------------- DEBER CALCULADORA ---------------------    //
   @Get('/suma')
   @HttpCode(200)
   sumaJorge(@Headers() headers, @Response() response, @Request() request): string {
