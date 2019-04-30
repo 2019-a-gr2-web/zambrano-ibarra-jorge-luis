@@ -68,8 +68,6 @@ export class AppController {
     }
     const numero1 = Number(parametrosCuerpo.numero1);
     const numero2 = Number(parametrosCuerpo.numero2);
-
-
     const esquemaValidacionNumero = Joi
         .object()
         .keys({
@@ -107,11 +105,7 @@ export class AppController {
         });
       }
     }
-
-
-
   }
-
   @Put('/multiplicacion')
   multiJorge(@Query() parametrosQuery, @Response() response, @Request() request): string {
     const cookie1= request.cookies;
@@ -123,11 +117,6 @@ export class AppController {
     }
     const numero1 = Number(parametrosQuery.numero1);
     const numero2 = Number(parametrosQuery.numero2);
-
-
-
-
-
     const esquemaValidacionNumero = Joi
         .object()
         .keys({

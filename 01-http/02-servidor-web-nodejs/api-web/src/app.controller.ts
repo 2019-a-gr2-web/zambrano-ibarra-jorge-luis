@@ -320,3 +320,79 @@ filter(
 );
 console.log(`Respuesta Filter: ${rFilter}`);
 //45 casi se daña x2
+//5
+const arreglosNumerosEvery= [1,2,3,4,5,6];
+const rEvery=arreglosNumerosEvery.
+every(
+    (valorActual)=>{
+        return valorActual>0;
+    }
+
+);
+console.log(`Respuesta Every: ${rEvery}`);
+
+//6
+const arreglosNumerosSome= [1,2,3,4,5,6];
+const rSome=arreglosNumerosSome.
+some(
+    (valorActual)=>{
+        return valorActual<2;
+    }
+
+);
+console.log(`Respuesta Some: ${rSome}`);
+
+const arreglosNumerosReduce= [1,2,3,4,5,6];
+const valorDondeEmpiezaCalculo=100;
+const rReduce=arreglosNumerosReduce.
+reduce(
+    (acumulado,valorActual)=>{
+        return acumulado+ valorActual;
+    },
+    valorDondeEmpiezaCalculo
+
+);
+console.log(`Respuesta Reduce: ${rReduce}`);
+
+//<4
+//10%+5
+//>=4
+//15%+
+const arreglosNumerosReduce1= [1,2,3,4,5,6];
+const valorDondeEmpiezaCalculo1=0;
+const rReduce1=arreglosNumerosReduce1.
+reduce(
+    (acumulado,valorActual)=>{
+        if(valorActual<4)
+        return acumulado+ valorActual+(valorActual*0.1)+5;
+        else{
+            return acumulado+ valorActual+(valorActual*0.15)+3;
+        }
+    },
+    valorDondeEmpiezaCalculo1
+);
+console.log(`Respuesta Reduce1: ${rReduce1}`);
+
+const arreglosNumerosReduce2= [1,2,3,4,5,6];
+const valorDondeEmpiezaCalculo2=100;
+const rReduce2=arreglosNumerosReduce2.
+reduce(
+    (acumulado,valorActual)=>{
+        return acumulado- valorActual;
+    },
+    valorDondeEmpiezaCalculo
+
+);
+console.log(`Respuesta Reduce2: ${rReduce2}`);
+
+
+const arregloEjercicio=[1,2,3,4,5,6];
+const respEejercicio= arregloEjercicio.map((valorActual)=>{
+    return valorActual+10;
+})
+.filter((valorActual)=>{
+    return valorActual>15;
+}).some((valorActual)=>{
+    return valorActual>30;
+});
+console.log(`Respuesta Ejercicio: ${respEejercicio}`);
