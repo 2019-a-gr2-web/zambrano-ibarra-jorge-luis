@@ -121,9 +121,11 @@ export class AppController {
         }
         //return 'Ok';
     }
-    @Get('/inicio')
+    @Get('/peliculas')
     inicio(@Response() res){
-      return res.render('inicio')
+      return res.render('peliculas/inicio',{
+
+      })
     }
 
 
@@ -144,7 +146,7 @@ class usuario{
     this.atributoProtegido = atributoProtegido;
   }
   @MetodoA()
-  public metodoPublico(@ParametroA() a){}
+  publico metodoPublico(@ParametroA() a){}
   @MetodoB()
   private metodoPrivado(){}
   protected metodoProtegido(){}
