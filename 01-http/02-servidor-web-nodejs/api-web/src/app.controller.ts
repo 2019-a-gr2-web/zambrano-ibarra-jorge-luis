@@ -6,6 +6,8 @@ import * as Joi from '@hapi/joi';
 // @ts-ignore
 @Controller('/api')
 export class AppController {
+
+    arrelgoUsuario =[];
   constructor(private readonly appService: AppService) {}
 
   @Get('/hello-world')
@@ -133,6 +135,7 @@ export class AppController {
 
         })
     }
+
 
 
 
