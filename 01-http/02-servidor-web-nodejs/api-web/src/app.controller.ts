@@ -125,13 +125,13 @@ export class AppController {
     }
     @Get('/peliculas')
     inicio(@Response() res){
-      return res.render('peliculas/inicio',{
+      return res.render('peliculas/estilos',{
 
       })
     }
-    @Get('/estilos')
+    @Get('/deber')
     estilos(@Response() res){
-        return res.render('peliculas/estilos',{
+        return res.render('peliculas/deber2',{
 
         })
     }
