@@ -6,6 +6,8 @@ import * as Joi from '@hapi/joi';
 // @ts-ignore
 @Controller('/api')
 export class AppController {
+
+    arrelgoUsuario =[];
   constructor(private readonly appService: AppService) {}
 
   @Get('/hello-world')
@@ -123,16 +125,17 @@ export class AppController {
     }
     @Get('/peliculas')
     inicio(@Response() res){
-      return res.render('peliculas/inicio',{
+      return res.render('peliculas/estilos',{
 
       })
     }
-    @Get('/estilos')
+    @Get('/deber')
     estilos(@Response() res){
-        return res.render('peliculas/estilos',{
+        return res.render('peliculas/deber2',{
 
         })
     }
+
 
 
 
