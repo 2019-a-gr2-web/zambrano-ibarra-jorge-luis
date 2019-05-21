@@ -6,8 +6,10 @@
     <link rel="icon"
           href="/Imagenes/dropbox.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
         /* .css */
@@ -17,39 +19,44 @@
         }
         h5{
             margin-left:0%;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: normal;
             color: #0070E0;
         }
         .navbar :hover:not(.active){
             margin-left:0%;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 15px;
+            font-weight: normal;
+            color: #0070E0;
+        }
+        .azul{
+            margin-left:0%;
+            font-size: 12px;
+            font-weight: normal;
             color: #0070E0;
         }
         .negrita{
             margin-left:0%;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             color: #0070E0;
         }
         .gris{
             margin-left:0%;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: normal;
             color: #637282;
         }
 
         .gris1{
             margin-left:0%;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: normal;
             color: #637282;
         }
         .w3-sidebar a {
             display: block;
             color: black;
-            padding: 16px;
             text-decoration: none;
         }
         .w3-sidebar a.active {
@@ -64,7 +71,7 @@
 
         .gris2{
             margin-left:0%;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: normal;
             color: #637282;
         }
@@ -91,8 +98,8 @@
 
         .topnav :hover:not(.active) {
             margin-left:0%;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 15px;
+            font-weight: normal;
             color: #0070E0;
         }
 
@@ -100,7 +107,7 @@
             .w3-sidebar {
                 width: 0;
                 height: 0;
-                position: relative;
+                position: static;
 
             }
             .topnav {
@@ -133,25 +140,25 @@
 
 <div class="row">
 
-    <div class="col-sm-3" style="width:80%">
+    <div class="col-sm-3">
 
         <div id="ocultar">
-            <div id="mySidebar" class="w3-sidebar w3-light-grey w3-bar-block" style="width:20%">
+            <div id="mySidebar" class="w3-sidebar  w3-bar-block" style="width:17%; background-color: rgb(247, 249, 250); overflow: hidden">
                 <div class="navbar">
-                    <div style="border-bottom: lightgrey solid 1px">
-                        <ul>
+                    <div style="border-bottom: lightgrey solid 1px;">
+                        <ul style="margin-left: 2%">
                             <br>
                             <br>
-                            <img src="/Imagenes/dropbox.png" style="height: 30px; width:30px">
+                            <img src="/Imagenes/dpx1.png" style="height: 40px; width:50px">
                             <br>
                             <br>
                             <h5>Archivos</h5>
-                            <br>
                             <br>
                             <h5 class="negrita">Mis archivos</h5>
                             <h5 class="gris">Compartir</h5>
                             <h5 class="gris">Solicitudes de archivos</h5>
                             <h5 class="gris">Archivos eliminados</h5>
+
                             <br>
                             <br>
                             <br>
@@ -163,25 +170,22 @@
                             <br>
                             <br>
                             <br>
-                            <br>
+
 
                         </ul>
-
-
                     </div>
 
                     <ul>
                         <h5 class="gris">Personal</h5>
                         <h5 class="gris1">Solo tú</h5>
                     </ul>
-
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-9">
-        <div class="row">
+
+    <div class="col-sm-9 ">
+        <div class="row" >
             <div class="col-sm-2">
                 <div class="topnav" p>
                     <h5 class="negrita">Mis archivos</h5>
@@ -193,7 +197,7 @@
             <div class="col-sm-10">
                 <div style="margin-left: 80%; margin-top:1%" >
 
-                    <img src="/Imagenes/estrellita.png"  ><a href="#">Subir de categoría</a>
+                    <img src="/Imagenes/estrellita.png"  ><a class="azul" href="#">Subir de categoría</a>
                 </div>
             </div>
         </div>
@@ -205,7 +209,8 @@
             </div>
             <div class="col-sm-4">
 
-                <input type="text" style="border-radius: 20px" placeholder=" Buscar">
+                <input class="glyphicon" type="text" style="border-radius: 20px" placeholder="&#xe003 Buscar">
+
                 <img src="/Imagenes/iconos.png" >
             </div>
         </div>
@@ -402,17 +407,15 @@
                     <br>
                     <button class="btn-primary" style="border-radius: 5px; margin-left: 15%">Crear nuevo archivo</button>
                     <ul>
-                        <img src="/Imagenes/cargar.png" class="tabla" ><a href="#">Cargar archivos</a>
+                        <img src="/Imagenes/cargar.png" class="tabla" ><a class="azul" href="#">Cargar archivos</a>
                         <br>
-                        <img src="/Imagenes/cargarc.png" class="tabla" ><a href="#">Cargar carpeta</a>
+                        <img src="/Imagenes/cargarc.png" class="tabla" ><a class="azul" href="#">Cargar carpeta</a>
                         <br>
-                        <img src="/Imagenes/nuevacc.png" class="tabla" ><a href="#">Nueva carpeta compartida</a>
+                        <img src="/Imagenes/nuevacc.png" class="tabla" ><a class="azul" href="#">Nueva carpeta compartida</a>
                         <br>
-                        <img src="/Imagenes/nuevac.png" class="tabla" ><a href="#">Nueva carpeta</a>
+                        <img src="/Imagenes/nuevac.png" class="tabla" ><a class="azul" href="#">Nueva carpeta</a>
                         <br>
-                        <img src="/Imagenes/mostrar.png" class="tabla" ><a href="#">Mostrar archivos eliminados</a>
-                        <br>
-                        <br>
+                        <img src="/Imagenes/mostrar.png" class="tabla" ><a class="azul" href="#">Mostrar archivos eliminados</a>
                         <br>
                         <br>
                         <br>
@@ -423,7 +426,10 @@
                         <br>
                         <br>
                         <br>
-
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                         <img src="/Imagenes/inte.png" style="float: right" ><h4 class="gris2">...       Privacidad</h4>
 
 
