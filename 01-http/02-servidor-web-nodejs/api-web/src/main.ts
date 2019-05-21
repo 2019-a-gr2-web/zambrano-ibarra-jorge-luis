@@ -16,7 +16,7 @@ async function bootstrap() {
   app.setViewEngine('ejs');
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.use(express.static('publico'));
-  await app.listen(3009);
+  await app.listen(3010);
 
 }
 bootstrap();
