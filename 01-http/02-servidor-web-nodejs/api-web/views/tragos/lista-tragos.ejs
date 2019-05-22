@@ -4,7 +4,7 @@
     }
 </style>
 <a href="/api/traguito/crear">
-<button>Crear</button>
+    <button>Crear</button>
 </a>
 <table>
     <tr>
@@ -16,21 +16,21 @@
         <th>Acciones</th>
     </tr>
     <% arregloTragos.forEach((trago)=>{ %>
-    <tr>
-        <td> <%=trago.nombre%> </td>
-        <td> <%=trago.gradosAlcohol%> </td>
-        <td> <%=trago.fechaCaducidad%> </td>
-        <td> <%=trago.precio%> </td>
-        <td> <%=trago.tipo%> </td>
-        <td>
-            <button>Editar</button>
-            <input id="id" name="id" type="text" value="trago.id" hidden>
-            <form action="/api/traguito/eliminar"
-                  method="post">
-            <button>Eliminar</button>
-            </form>
-
-        </td>
-    </tr>
-    <% })%>
+        <tr>
+            <td> <%= trago.nombre %> </td>
+            <td> <%= trago.gradosAlcohol %> </td>
+            <td> <%= trago.fechaCaducidad %> </td>
+            <td> <%= trago.precio %> </td>
+            <td> <%= trago.tipo %> </td>
+            <td>
+                <button>Editar</button>
+                <form action="/api/traguito/eliminar" method="post">
+                    <input id="id" name="id" type="number" value="<%= trago.id %>"  hidden >
+                    <button>Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    <% }) %>
 </table>
+</body>
+</html>

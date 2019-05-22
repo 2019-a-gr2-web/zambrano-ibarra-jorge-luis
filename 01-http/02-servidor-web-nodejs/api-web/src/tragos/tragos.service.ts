@@ -38,6 +38,7 @@ export class TragosService {
         );
     }
     eliminarPorId(id:number):Tragos[]{
+        console.log('id:', id);
         const indice= this.bddTragos.findIndex(
             (trago)=>{
                 return trago.id===id

@@ -21,6 +21,7 @@ export class TragosController {
         @Body() trago:Tragos,
         @Res() res
     ){
+
         trago.gradosAlcohol=Number(trago.gradosAlcohol);
         trago.precio=Number(trago.precio);
         trago.fechaCaducidad =new Date(trago.fechaCaducidad);
@@ -30,12 +31,10 @@ export class TragosController {
     }
 
     @Post('eliminar')
-    eliminarTragoPost(
-        @Body() trago:Tragos,
-        @Res() res
-    ){
-        trago.id=Number(trago.id);
-        this._tragosService.eliminarPorId(trago.id);
+    eliminarTrago(@Res() res,
+                  @Body('id') id: number) {
+
+        this._tragosService.eliminarPorId(Number(id));
         res.redirect('/api/traguito/lista');
     }
 
