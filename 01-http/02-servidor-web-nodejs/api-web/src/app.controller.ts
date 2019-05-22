@@ -8,48 +8,48 @@ import * as Joi from '@hapi/joi';
 export class AppController {
 
     arrelgoUsuario =[];
-  constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) {}
 
-  @Get('/hello-world')
-  helloWorld(): string {
-    return 'Hello world';
-  }
-  @Post('/hola-mundo')  // METODO HTTP
-  holaMundo() {
-    return 'Hola mundo';
-  }
-  @Put('/salut-monde')
-  salutMonde() {
-      return 'salut monde';
-  }
-  @Delete('/hallo-welt')
-  halloWelt() {
+    @Get('/hello-world')
+    helloWorld(): string {
+        return 'Hello world';
+    }
+    @Post('/hola-mundo')  // METODO HTTP
+    holaMundo() {
+        return 'Hola mundo';
+    }
+    @Put('/salut-monde')
+    salutMonde() {
+        return 'salut monde';
+    }
+    @Delete('/hallo-welt')
+    halloWelt() {
         return 'Hallo Welt';
-  }
-  @Get('/adivina')
-  adivina(@Headers() headers): string {
-      console.log('Headers', headers);
-      const numeroDeCabecera = Number(headers.numero);
-      const numeroRandomico = Math.round(Math.random() * 10);
-      if(numeroDeCabecera == numeroRandomico){
-          return'ok';
-      }else{
-          return ':c';
-      }
+    }
+    @Get('/adivina')
+    adivina(@Headers() headers): string {
+        console.log('Headers', headers);
+        const numeroDeCabecera = Number(headers.numero);
+        const numeroRandomico = Math.round(Math.random() * 10);
+        if(numeroDeCabecera == numeroRandomico){
+            return'ok';
+        }else{
+            return ':c';
+        }
 
-      return 'ok';
-  }
-  @Get('/consultar')
-   consultar(@Query() queryParams){
-      console.log(queryParams)
-      if (queryParams.nombre){
+        return 'ok';
+    }
+    @Get('/consultar')
+    consultar(@Query() queryParams){
+        console.log(queryParams)
+        if (queryParams.nombre){
 
-          return `Hola ${queryParams.nombre}`
+            return `Hola ${queryParams.nombre}`
 
-      }else{
-          return 'Hola extraño'
-      }
-  }
+        }else{
+            return 'Hola extraño'
+        }
+    }
     @Get('/ciudad/:idCiudad')
     ciudad(@Param() parametrosRuta){
         console.log(parametrosRuta);
@@ -65,20 +65,20 @@ export class AppController {
     @Post('registroComida')
     registroComida(@Body() parametrosCuerpo, @Response() response){
 
-      console.log(parametrosCuerpo);
-      if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
-          const cantidad= Number(parametrosCuerpo.cantidad);
-          if (cantidad>1) {
-              response.set('Premio', 'Fanesca');
-          }
-          return response.send({mensaje: 'Registro Creado'})
-      }else{
-          return response.status(400)
-              .send({
-                      mensaje:'ERROR, no envia nombre o cantidad',
-                  error: 400
-              });
-      }
+        console.log(parametrosCuerpo);
+        if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
+            const cantidad= Number(parametrosCuerpo.cantidad);
+            if (cantidad>1) {
+                response.set('Premio', 'Fanesca');
+            }
+            return response.send({mensaje: 'Registro Creado'})
+        }else{
+            return response.status(400)
+                .send({
+                    mensaje:'ERROR, no envia nombre o cantidad',
+                    error: 400
+                });
+        }
 
 
     }
@@ -89,9 +89,9 @@ export class AppController {
         const esquemaValidacionNumero= Joi
             .object()
             .keys({
-            numero: Joi.number().integer().required()
+                numero: Joi.number().integer().required()
 
-        });
+            });
         const objetoVladicacion={
             numero: cookies.numero
         };
@@ -108,9 +108,9 @@ export class AppController {
             console.log('No es valida esta cookie');
         }
         if(cookies.micookie){
-        const horafechaServidor= new Date();
-        const minutos = horafechaServidor.getMinutes();
-        horafechaServidor.setMinutes(minutos+1);
+            const horafechaServidor= new Date();
+            const minutos = horafechaServidor.getMinutes();
+            horafechaServidor.setMinutes(minutos+1);
             response.cookie('fechaServidor', new Date().getTime(),
                 {
                     //expires: horafechaServidor
@@ -125,9 +125,9 @@ export class AppController {
     }
     @Get('/peliculas')
     inicio(@Response() res){
-      return res.render('peliculas/estilos',{
+        return res.render('peliculas/estilos',{
 
-      })
+        })
     }
     @Get('/deber')
     estilos(@Response() res){
@@ -191,7 +191,7 @@ const respuestHolaMundo= holaMundo();
 console.log('Resp hola mundo: ', respuestHolaMundo);
 
 function suma(a:number,b:number):number{
-   return a+b;
+    return a+b;
 }
 const respuestaSuma= suma(1,2);
 console.log('Resp suma: ', respuestaSuma);
@@ -258,15 +258,15 @@ if({}){//truty
 }
 
 //operadores de arreglos
- //los arreglos pueden tener lo que sea
-     const arreglo= [
-         function () {return 'o'},
-         1,
-         'C',
-         true,
-         {},
-         []
-     ];
+//los arreglos pueden tener lo que sea
+const arreglo= [
+    function () {return 'o'},
+    1,
+    'C',
+    true,
+    {},
+    []
+];
 const arreglosNumeros = [1,2,3,4,5,6];
 // 1) imprimir en consola todos los elementos
 // 2) sume dos a los pares y 1 a los impares
@@ -283,10 +283,10 @@ const arreglosNumeros = [1,2,3,4,5,6];
 const arreglosNumerosForEach = [1,2,3,4,5,6];
 
 const rforeach= arreglosNumerosForEach.forEach(function (valorActual,indice,arreglo) {
-       console.log(`Valor: ${valorActual}`);
-       console.log(`Indice: ${indice}`);
-        console.log(`Arreglo: ${arreglo}`);
-    });
+    console.log(`Valor: ${valorActual}`);
+    console.log(`Indice: ${indice}`);
+    console.log(`Arreglo: ${arreglo}`);
+});
 
 //1)
 const r2foreach= arreglosNumerosForEach.forEach((arreglo)=>
@@ -307,16 +307,16 @@ const rMap=arreglosNumerosMap
                 return nuevoValor;
             }
         }
-        );
+    );
 console.log(`Respuesta Map: ${rMap}`);
 //3)
 const arreglosNumerosFind= [1,2,3,4,5,6];
 const rFind = arreglosNumerosFind.
 find(
     (valorActual)=>{
-    return valorActual==4;
+        return valorActual==4;
 
-}
+    }
 
 );
 console.log(`Respuesta Find: ${rFind}`);
@@ -375,7 +375,7 @@ const rReduce1=arreglosNumerosReduce1.
 reduce(
     (acumulado,valorActual)=>{
         if(valorActual<4)
-        return acumulado+ valorActual+(valorActual*0.1)+5;
+            return acumulado+ valorActual+(valorActual*0.1)+5;
         else{
             return acumulado+ valorActual+(valorActual*0.15)+3;
         }
@@ -401,9 +401,9 @@ const arregloEjercicio=[1,2,3,4,5,6];
 const respEejercicio= arregloEjercicio.map((valorActual)=>{
     return valorActual+10;
 })
-.filter((valorActual)=>{
-    return valorActual>15;
-}).some((valorActual)=>{
-    return valorActual>30;
-});
+    .filter((valorActual)=>{
+        return valorActual>15;
+    }).some((valorActual)=>{
+        return valorActual>30;
+    });
 console.log(`Respuesta Ejercicio: ${respEejercicio}`);
