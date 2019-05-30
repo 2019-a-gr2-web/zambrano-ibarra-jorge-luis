@@ -78,4 +78,21 @@ export class AppController {
     res.render('gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
   }
 
+  @Post('eliminar')
+  eliminarTienda(@Res() res,
+                @Body('id') id: number, @Request() request) {
+
+    this.appService.eliminarPorId(Number(id));
+    res.redirect('/examen/listaTiendas');
+  }
+
+
+  @Post('/buscarTienda')
+  buscarTienda(@Res() res,
+                 @Body('busquedaTiendas') busquedaTiendas: string, @Request() request) {
+
+    this.appService.buscarPorNombre(busquedaTiendas);
+    res.redirect('/examen/listaTiendas');
+  }
+
 }
