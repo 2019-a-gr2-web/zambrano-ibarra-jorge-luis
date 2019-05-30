@@ -65,11 +65,16 @@ export class AppService {
     return this.bddTiendas;
   }
   buscarPorNombre(nombre: string) {
-    this.bddTiendas.find(
+    console.log('nombre:', nombre);
+    const resultado=this.bddTiendas.filter(
         (tienda)=>{
-          return tienda.nombre.toUpperCase().includes(nombre.toUpperCase());
+          return tienda.nombre.includes(nombre);
         }
     );
+    console.log('resultado:',resultado);
+    return resultado;
+
+
   }
 
 }

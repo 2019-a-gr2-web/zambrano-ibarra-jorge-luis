@@ -66,6 +66,7 @@ export class AppController {
     tienda.RUC=Number(tienda.RUC);
 
     tienda.fechaApertura =new Date(tienda.fechaApertura);
+    tienda.matriz= Boolean(tienda.matriz);
     console.log(tienda);
     this.appService.crearTienda(tienda);
     res.redirect('/examen/listaTiendas');
@@ -90,9 +91,14 @@ export class AppController {
   @Post('/buscarTienda')
   buscarTienda(@Res() res,
                  @Body('busquedaTiendas') busquedaTiendas: string, @Request() request) {
-
-    this.appService.buscarPorNombre(busquedaTiendas);
-    res.redirect('/examen/listaTiendas');
+    const cookieSeg = request.signedCookies;
+    var arregloTiendas=this.appService.buscarPorNombre(busquedaTiendas);
+    console.log('impiendo arreglo tiendas:',arregloTiendas);
+    if(arregloTiendas!=null){
+      res.render('gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+    }else {
+      res.redirect('/examen/listaTiendas');
+    }
   }
 
 }
