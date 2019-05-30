@@ -66,6 +66,7 @@ export class AppController {
     tienda.RUC=Number(tienda.RUC);
 
     tienda.fechaApertura =new Date(tienda.fechaApertura);
+    tienda.matriz= Boolean(tienda.matriz);
     console.log(tienda);
     this.appService.crearTienda(tienda);
     res.redirect('/examen/listaTiendas');
@@ -76,6 +77,28 @@ export class AppController {
     const cookieSeg = request.signedCookies;
     const arregloTiendas= this.appService.bddTiendas;
     res.render('gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+  }
+
+  @Post('eliminar')
+  eliminarTienda(@Res() res,
+                @Body('id') id: number, @Request() request) {
+
+    this.appService.eliminarPorId(Number(id));
+    res.redirect('/examen/listaTiendas');
+  }
+
+
+  @Post('/buscarTienda')
+  buscarTienda(@Res() res,
+                 @Body('busquedaTiendas') busquedaTiendas: string, @Request() request) {
+    const cookieSeg = request.signedCookies;
+    var arregloTiendas=this.appService.buscarPorNombre(busquedaTiendas);
+    console.log('impiendo arreglo tiendas:',arregloTiendas);
+    if(arregloTiendas!=null){
+      res.render('gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+    }else {
+      res.redirect('/examen/listaTiendas');
+    }
   }
 
 }

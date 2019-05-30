@@ -39,16 +39,7 @@ export class AppService {
         }
     );
   }
-  eliminarPorId(id:number):Tragos[]{
-    console.log('id:', id);
-    const indice= this.bddTragos.findIndex(
-        (trago)=>{
-          return trago.id===id
-        }
-    );
-    this.bddTragos.splice(indice,1);
-    return this.bddTragos;
-  }
+
   actualizar(tragoActualizado: Tragos, id:number):Tragos[]{
     const indice= this.bddTragos.findIndex(
         (trago)=>{
@@ -63,6 +54,27 @@ export class AppService {
 
 
 }*/
+  eliminarPorId(id:number):Tiendas[]{
+    console.log('id:', id);
+    const indice= this.bddTiendas.findIndex(
+        (tienda)=>{
+          return tienda.id===id
+        }
+    );
+    this.bddTiendas.splice(indice,1);
+    return this.bddTiendas;
+  }
+  buscarPorNombre(nombre: string) {
+    console.log('nombre:', nombre);
+    const resultado=this.bddTiendas.filter(
+        (tienda)=>{
+          return tienda.nombre.includes(nombre);
+        }
+    );
+    console.log('resultado:',resultado);
+    return resultado;
 
+
+  }
 
 }
