@@ -38,4 +38,5 @@ export class TragosController {
         res.redirect('/api/traguito/lista');
     }
 
+
 }

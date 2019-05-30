@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<style>
+    table,tr,td,th{
+        border: solid black 1px;
+    }
+</style>
+<head>
+    <title>Gestion Tiendas</title>
+    <meta charset ="UTF-8">
+    <link rel="icon"
+          href="/Imagenes/dropbox.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+
+    <a class="navbar-brand" href="/">Examen Web GR2</a>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <span class="navbar-text mr-3 text-light">
+         <%= nombre%>
+        </span>
+
+        <form action="/examen/borrarCookie" method="POST">
+            <button type="submit" class="btn btn-primary"style="background-color: lightblue">Salir</button>
+        </form>
+
+
+    </div>
+
+
+
+</nav>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="mt-5 d-flex justify-content-center">
+                <form>
+                <div class="form-group">
+                    <label for="nombre">Búsqueda</label>
+                    <input class="form-control" id="busquedaTiendas" name="busquedaTiendas" type="text">
+                </div>
+
+                </form>
+            </div>
+        </div>
+         <div class="col-md-5">
+            <div class="mt-5 d-flex justify-content-center">
+                <form action="/examen/buscarTienda" method="POST">
+                    <button type="submit" class=" mt-4 btn btn-primary" >Buscar</button>
+
+                </form>
+                <br>
+            </div>
+             <div class="mt-3 d-flex justify-content-center">
+                 <a href="/examen/crearTienda">
+                    <button type="submit" class="btn btn-primary" >Crear</button>
+                 </a>
+                </form>
+             </div>
+        </div>
+
+
+
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <table class="ml-5">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Fecha Apertura</th>
+                    <th>RUC</th>
+                    <th>Matriz</th>
+                    <th>Acciones</th>
+                </tr>
+                <% arregloTiendas.forEach((tienda)=>{ %>
+                    <tr>
+                        <td> <%= tienda.nombre %> </td>
+                        <td> <%= tienda.direccion %> </td>
+                        <td> <%= tienda.fechaApertura %> </td>
+                        <td> <%= tienda.RUC %> </td>
+                        <td> <%= tienda.matriz %> </td>
+                        <td>
+                            <button>Gestionar Hijos</button>
+                            <form action="/api/traguito/eliminar" method="post">
+                                <input id="id" name="id" type="number" value="<%= tienda.id %>"  hidden >
+                                <button>Borrar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
