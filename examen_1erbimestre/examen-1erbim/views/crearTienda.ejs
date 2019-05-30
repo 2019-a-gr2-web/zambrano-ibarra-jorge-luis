@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Crear Tienda</title>
+    <meta charset ="UTF-8">
+    <link rel="icon"
+          href="/Imagenes/dropbox.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+<!-- header 1-6-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+
+    <a class="navbar-brand" href="/">Examen Web GR2</a>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <span class="navbar-text mr-3 text-light">
+         <%= nombre%>
+        </span>
+
+        <form action="/examen/borrarCookie" method="POST">
+            <button type="submit" class="btn btn-primary"style="background-color: lightblue">Salir</button>
+        </form>
+
+
+    </div>
+
+
+
+</nav>
+
+<div class="container">
+    <div class="mt-5 d-flex justify-content-center">
+        <form action="/examen/crearTienda" method="post">
+            <h1>Formulario de Creación de tiendas</h1>
+            <p>Crea una nueva tienda.</p>
+
+            <form action="/examen/crearTienda"
+                  method="post">
+
+                <label for="nombreId">Nombre Tienda</label>
+                <input id="nombreTiendaId" name="nombre" type="text">
+                <br>
+                <label for="direccionId">Direccion</label>
+                <input id="direccionId" name="direccion" type="text">
+                <br>
+                <label for="fechaAperturaId">Fecha de Apertura</label>
+                <input id="fechaAperturaId" name="fechaApertura" type="date">
+
+                <br>
+                <label for="RUCId">RUC</label>
+                <input id="RUCId" name="RUC" type="number" min="0">
+                <br>
+                <label for="MatrizId">Matriz</label>
+                <input id="MatrizId" name="matriz" type="radio">
+                <br>
+                <!--<button type="reset">Reset</button>-->
+                <!--<button type="submit">Submit</button>-->
+                <a href="/examen/listaTiendas">
+                    <button type="button">Cancelar</button>
+                </a>
+                <button>Enviar Informacion</button>
+            </form>
+        </form>
+
+        <br>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
