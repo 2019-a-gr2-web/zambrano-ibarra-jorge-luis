@@ -112,7 +112,9 @@
                         <td> <%= tienda.RUC %> </td>
                         <td> <%= tienda.matriz %> </td>
                         <td>
+                            <a href="/examen/tienda/gestionarProductos/<%=tienda.id%>">
                             <button>Gestionar Hijos</button>
+                            </a>
                             <form action="/examen/eliminar" method="post">
                                 <input id="id" name="id" type="number" value="<%= tienda.id %>"  hidden >
                                 <button>Borrar</button>
@@ -126,5 +128,3 @@
 </div>
 
 
-</body>
-</html>

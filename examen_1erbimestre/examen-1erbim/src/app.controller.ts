@@ -2,6 +2,7 @@ import {Controller, Get, Response, Request, Headers, Post, Body, Res} from '@nes
 import { AppService } from './app.service';
 import {Tragos} from "../../../01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos";
 import {Tiendas} from "./tiendas/tiendas";
+import {isEmpty} from "@nestjs/common/utils/shared.utils";
 
 @Controller('/examen')
 export class AppController {
@@ -24,6 +25,7 @@ export class AppController {
 
     return response.render('gestiontiendas',{arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
   }
+
   @Post('/borrarCookie')
     borrarCookiemethod(@Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
     response.clearCookie("nombreUsuario");
