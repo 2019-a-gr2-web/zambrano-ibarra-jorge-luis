@@ -50,7 +50,7 @@ export class ProductosController {
         producto.fechaLanzamientoProducto =new Date(producto.fechaLanzamientoProducto);
         console.log(producto);
         this.productosService.crearProducto(producto);
-        res.redirect('/examen/tienda/gestionarProductos/'+producto.tiendaId);
+        res.redirect('/examen/tienda/gestionarProductos/'+id);
     }
     @Post('eliminarProductos')
     eliminarProducto(@Param() params,@Res() res,  @Body('tiendaIdProd') idTienda: number,
@@ -76,7 +76,7 @@ export class ProductosController {
          arregloProductoBusqueda=this.productosService.buscarPorNombre(busquedaProductos,id);
         console.log('impiendo arreglo productos:',arregloProductoBusqueda);
 
-        if(arregloProductoBusqueda!=null){
+        if(busquedaProductos!=null){
             res.redirect('/examen/tienda/busquedaProducto/'+id);
         }else{
             res.redirect('/examen/tienda/gestionarProductos/'+id);
