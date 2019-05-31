@@ -42,7 +42,7 @@ export class TiendaController {
 
 
     @Get('/gestionTiendas')
-    gestionarTiendas1(@Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
+    gestionarTiendas1(@Headers() headers, @Request() request, @Response() response) {
         const cookieSeg = request.signedCookies;
 
         if (cookieSeg.nombreUsuario) {

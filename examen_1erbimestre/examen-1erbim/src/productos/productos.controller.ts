@@ -8,7 +8,7 @@ export class ProductosController {
 
     }
     @Get('/gestionarProductos/:id')
-    gestionarHijos(@Param() params, @Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
+    gestionarHijos(@Param() params, @Headers() headers, @Request() request, @Response() response) {
         id= Number(params.id);
         const cookieSeg = request.signedCookies;
         const arregloProductos= this.productosService.buscarPorId(Number(id));
@@ -24,7 +24,7 @@ export class ProductosController {
 
     }
     @Get('/busquedaProducto/:id')
-    busquedaHijos(@Param() params, @Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
+    busquedaHijos(@Param() params, @Headers() headers, @Request() request, @Response() response) {
         id= Number(params.id);
         const cookieSeg = request.signedCookies;
         if (cookieSeg.nombreUsuario) {
