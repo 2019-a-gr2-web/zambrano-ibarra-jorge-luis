@@ -8,14 +8,7 @@ export class TiendaService {
     bddTiendas: Tiendas[]=[];
     recnum=1;
     constructor (){
-        const tienda:Tiendas={
-            nombre:'Tienda Dieguito',
-            direccion:'Floresta',
-            fechaApertura: new Date(2019,5,10),
-            RUC:1316509213001,
-            matriz:false
-        };
-        this.crearTienda(tienda)
+
     }
     crearTienda(nuevaTienda: Tiendas):Tiendas {
         nuevaTienda.id= this.recnum;

@@ -7,16 +7,6 @@ export class ProductosService {
     bddProductos: Productos[]=[];
     recnum=1;
     constructor (){
-        const productos:Productos={
-            numeroProducto:1,
-            nombreProducto:'Lavadora',
-            descripcionProducto:'Lavadora 12 kg lg',
-            fechaLanzamientoProducto: new Date(2019,5,10),
-            precioProducto:13.1,
-            aniosGarantiaProducto:1,
-            tiendaId:1
-        };
-        this.crearProducto(productos)
     }
     crearProducto(nuevoProducto: Productos):Productos {
         nuevoProducto.id= this.recnum;

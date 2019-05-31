@@ -19,7 +19,7 @@ export class ProductosController {
 
         }
         else{
-            return response.render('login');
+            return response.redirect('/examen/inicioSesion');
         }
 
     }
@@ -33,7 +33,7 @@ export class ProductosController {
 
         }
         else{
-            return response.render('login');
+            return response.redirect('/examen/inicioSesion');
         }
 
 
@@ -54,9 +54,8 @@ export class ProductosController {
 
         }
         else{
-            return res.render('login');
+            return res.redirect('/examen/inicioSesion');
         }
-
 
 
     }
@@ -81,7 +80,7 @@ export class ProductosController {
 
         }
         else{
-            return res.render('login');
+            return res.redirect('/examen/inicioSesion');
         }
 
 
@@ -98,7 +97,7 @@ export class ProductosController {
 
         }
         else{
-            return res.render('login');
+            return res.redirect('/examen/inicioSesion');
         }
 
 
@@ -113,7 +112,7 @@ export class ProductosController {
 
         }
         else{
-            return res.render('login');
+            return res.redirect('/examen/inicioSesion');
         }
 
         }
@@ -134,7 +133,7 @@ export class ProductosController {
 
             }
             else{
-                return res.render('login');
+                return res.redirect('/examen/inicioSesion');
             }
 
         }else{
@@ -144,7 +143,7 @@ export class ProductosController {
 
             }
             else{
-                return res.render('login');
+                return res.redirect('/examen/inicioSesion');
             }
 
         }
