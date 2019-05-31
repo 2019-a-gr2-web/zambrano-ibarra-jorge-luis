@@ -11,21 +11,37 @@ export class TiendaController {
     loginCookie1(@Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
         const cookieSeg = request.signedCookies;
         if (!cookieSeg.nombreUsuario) {
+
             response.cookie('nombreUsuario', nombre,{signed: true});
             cookieSeg.nombreUsuario=nombre;
+
+
+        }
+        if (cookieSeg.nombreUsuario) {
+
+            response.redirect('/examen/bienvenido')
+        }
+        else{
+            return response.render('login');
         }
 
-        response.redirect('/examen/bienvenido')
     }
     @Post('/gestionarTiendas')
     gestionarTiendas(@Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
         const cookieSeg = request.signedCookies;
         const arregloTiendas= this.tiendaService.bddTiendas;
+        if (cookieSeg.nombreUsuario) {
 
-        return response.render('Tiendas/gestiontiendas',{arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
-    }
+            return response.render('Tiendas/gestiontiendas',{arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+        }
+        else{
+            return response.render('login');
+        }
 
-    @Post('/borrarCookie')
+
+
+
+    }@Post('/borrarCookie')
     borrarCookiemethod(@Headers() headers, @Request() request, @Response() response, @Body('nombre') nombre: string) {
         response.clearCookie("nombreUsuario");
         response.redirect('/examen/inicioSesion')
@@ -36,56 +52,99 @@ export class TiendaController {
         return res.render('login')
     }
     @Get('/gestion')
-    gestion(@Response() res){
-        res.redirect('/examen/gestionarTiendas')
+    gestion(@Response() res, @Request() request){
+        const cookieSeg = request.signedCookies;
+        if (cookieSeg.nombreUsuario) {
+
+            res.redirect('/examen/gestionarTiendas')
+        }
+        else{
+            return res.render('login');
+        }
     }
 
     @Get('/bienvenido')
     bienvenido(@Response() res,  @Request() request){
         const cookieSeg = request.signedCookies;
-        return res.render('paginaprincipal',{
-            nombre:cookieSeg.nombreUsuario
-        })
+
+        if (cookieSeg.nombreUsuario) {
+
+            return res.render('paginaprincipal',{
+                nombre:cookieSeg.nombreUsuario
+            })
+        }
+        else{
+            return res.render('login');
+        }
 
 
     }
     @Get('/crearTienda')
     crearTienda( @Res() res,@Request() request){
         const cookieSeg = request.signedCookies;
-        return res.render('Tiendas/crearTienda',{
-            nombre:cookieSeg.nombreUsuario
-        })
+
+        if (cookieSeg.nombreUsuario) {
+
+            return res.render('Tiendas/crearTienda',{
+                nombre:cookieSeg.nombreUsuario
+            })
+        }
+        else{
+            return res.render('login');
+        }
 
 
     }
     @Post('/crearTienda')
     crearTiendaPost(
         @Body() tienda:Tiendas,
-        @Res() res
+        @Res() res,
+        @Request() request
     ){
-
+        const cookieSeg = request.signedCookies;
         tienda.RUC=Number(tienda.RUC);
 
         tienda.fechaApertura =new Date(tienda.fechaApertura);
         tienda.matriz= Boolean(tienda.matriz);
         console.log(tienda);
         this.tiendaService.crearTienda(tienda);
-        res.redirect('/examen/listaTiendas');
+        if (cookieSeg.nombreUsuario) {
+
+            res.redirect('/examen/listaTiendas');
+        }
+        else{
+            return res.render('login');
+        }
+
     }
     @Get('/listaTiendas')
     listarTragos(@Request() request, @Response() res , @Body('nombre') nombre: string){
 
         const cookieSeg = request.signedCookies;
         const arregloTiendas= this.tiendaService.bddTiendas;
-        res.render('Tiendas/gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+        if (cookieSeg.nombreUsuario) {
+
+            res.render('Tiendas/gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+        }
+        else{
+            return res.render('login');
+        }
+
     }
 
     @Post('eliminar')
     eliminarTienda(@Res() res,
                    @Body('id') id: number, @Request() request) {
-
+        const cookieSeg = request.signedCookies;
         this.tiendaService.eliminarPorId(Number(id));
-        res.redirect('/examen/listaTiendas');
+        if (cookieSeg.nombreUsuario) {
+
+            res.redirect('/examen/listaTiendas');
+        }
+        else{
+            return res.render('login');
+        }
+
     }
 
 
@@ -96,9 +155,23 @@ export class TiendaController {
         var arregloTiendas=this.tiendaService.buscarPorNombre(busquedaTiendas);
         console.log('impiendo arreglo tiendas:',arregloTiendas);
         if(busquedaTiendas!=null){
-            res.render('gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+            if (cookieSeg.nombreUsuario) {
+
+                res.render('Tiendas/gestiontiendas', {arregloTiendas:arregloTiendas,nombre:cookieSeg.nombreUsuario})
+            }
+            else{
+                return res.render('login');
+            }
+
         }else {
-            res.redirect('/examen/listaTiendas');
+            if (cookieSeg.nombreUsuario) {
+
+                res.redirect('/examen/listaTiendas');
+            }
+            else{
+                return res.render('login');
+            }
+
         }
     }
 
