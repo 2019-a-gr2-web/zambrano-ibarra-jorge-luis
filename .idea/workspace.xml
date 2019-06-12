@@ -14,88 +14,89 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/app.controller.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="24">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding>
-                <element signature="e#0#92#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
+                <element signature="n#requireActual#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.service.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+            <state relative-caret-position="72">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="26" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#0#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/crearproductos.ejs">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-633">
-              <caret line="58" column="51" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="51" />
+            <state relative-caret-position="48">
+              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/gestiontiendas.ejs">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4">
-              <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="408">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2486">
-              <caret line="169" column="52" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#92#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.controller.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="70">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding>
-                <element signature="e#0#99#0" expanded="true" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/gestionarproductos.ejs">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="-504">
+              <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/crearTienda.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
+            <state relative-caret-position="1968">
               <caret line="82" column="45" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="45" />
             </state>
           </provider>
@@ -112,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/paginaprincipal.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
+            <state relative-caret-position="1416">
               <caret line="59" column="40" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="40" />
             </state>
           </provider>
@@ -130,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gestionar</find>
       <find>param</find>
       <find>tie</find>
       <find>tienda.id</find>
@@ -148,7 +148,6 @@
       <find>tiendas</find>
       <find>/log</find>
       <find>crear</find>
-      <find>borrar</find>
       <find>arregloproductobusq</find>
       <find>listatiendas</find>
       <find>eliminar</find>
@@ -160,6 +159,8 @@
       <find>gesti</find>
       <find>gestiont</find>
       <find>get</find>
+      <find>borr</find>
+      <find>borrar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,8 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules/.gitignore" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/.gitignore" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/.gitignore" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/view/inicio.ejs" />
@@ -179,10 +178,8 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/01-calculadora-cookie/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/peliculas.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/deber1.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/test/app.e2e-spec.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/deber.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" />
@@ -190,9 +187,7 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" />
         <option value="$PROJECT_DIR$/01-http/01-servidor-web-estatico/inicio.html" />
         <option value="$PROJECT_DIR$/01-http/01-servidor-web-estatico/fin.html" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/crear-editar.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/usuariologueado.ejs" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/login.ejs" />
@@ -208,17 +203,23 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/crearproductos.ejs" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/gestiontiendas.ejs" />
-        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/gestionarproductos.ejs" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/app.service.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.module.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/main.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/paginaprincipal.ejs" />
-        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.controller.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.service.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.service.ts" />
         <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.controller.ts" />
+        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.controller.ts" />
+        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/gestiontiendas.ejs" />
+        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/gestionarproductos.ejs" />
+        <option value="$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/main.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts" />
       </list>
     </option>
   </component>
@@ -294,23 +295,6 @@
             <path>
               <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
               <item name="examen_1erbimestre" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -341,15 +325,6 @@
               <item name="examen-1erbim" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tiendas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
-              <item name="examen_1erbimestre" type="462c0819:PsiDirectoryNode" />
-              <item name="examen-1erbim" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tiendas" type="462c0819:PsiDirectoryNode" />
-              <item name="interfacestiendas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
@@ -468,18 +443,23 @@
       <workItem from="1559228882097" duration="6725000" />
       <workItem from="1559236611353" duration="19736000" />
       <workItem from="1559259689421" duration="15937000" />
-      <workItem from="1559312700286" duration="7155000" />
+      <workItem from="1559312700286" duration="9746000" />
+      <workItem from="1559346319017" duration="1295000" />
+      <workItem from="1559675079104" duration="598000" />
+      <workItem from="1559761715551" duration="1445000" />
+      <workItem from="1560256531320" duration="255000" />
+      <workItem from="1560365301361" duration="4266000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221588000" />
+    <option name="totallyTimeSpent" value="232038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2157738" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2157738" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -491,7 +471,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.8139881" visible="true" weight="0.25882354" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.8139881" visible="true" weight="0.45210084" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.18601191" side_tool="true" weight="0.05042017" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -503,15 +483,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/01-calculadora-cookie/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -530,17 +501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="569" column="11" selection-start-line="569" selection-start-column="11" selection-end-line="569" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" column="37" selection-start-line="15" selection-start-column="1" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <element signature="n#requireActual#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,13 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/deber2.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5088">
-          <caret line="212" column="35" selection-start-line="212" selection-start-column="35" selection-end-line="212" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -649,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -670,43 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1512">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -764,27 +673,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/node_modules/express/lib/response.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10351">
           <caret line="783" column="3" selection-start-line="783" selection-start-column="3" selection-end-line="783" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,7 +689,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="144">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#92#0" expanded="true" />
@@ -805,55 +697,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/crearproductos.ejs">
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-633">
-          <caret line="58" column="51" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/gestiontiendas.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/paginaprincipal.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="59" column="40" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/gestionarproductos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/crearTienda.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="82" column="45" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="144">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.service.ts">
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/crearproductos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/gestiontiendas.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3072">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -862,8 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/tiendas/tienda.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2486">
-          <caret line="169" column="52" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
+        <state relative-caret-position="4200">
+          <caret line="179" column="24" selection-start-line="179" selection-start-column="24" selection-end-line="179" selection-end-column="24" />
           <folding>
             <element signature="e#0#92#0" expanded="true" />
           </folding>
@@ -872,10 +743,117 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/productos/productos.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+        <state relative-caret-position="744">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
             <element signature="e#0#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Productos/gestionarproductos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="125" column="32" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/deber2.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5088">
+          <caret line="212" column="35" selection-start-line="212" selection-start-column="35" selection-end-line="212" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/Tiendas/crearTienda.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1968">
+          <caret line="82" column="45" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examen_1erbimestre/examen-1erbim/views/paginaprincipal.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1416">
+          <caret line="59" column="40" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <element signature="n#requireActual#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
