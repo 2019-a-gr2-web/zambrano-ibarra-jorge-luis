@@ -1,4 +1,7 @@
-import {PrimaryGeneratedColumn,Column,Entity} from "typeorm";
+import {PrimaryGeneratedColumn, Column, Entity, OneToMany} from "typeorm";
+import {ManyToOne} from "typeorm/decorator/relations/ManyToOne";
+import {DistribuidorEntity} from "./distribuidor/distribuidor.entity";
+import {FiestaEntity} from "./fiesta/fiesta.entity";
 @Entity('bd_trago')
 export class TragosEntity{
     @PrimaryGeneratedColumn()
@@ -35,6 +38,13 @@ export class TragosEntity{
         name: 'precio',
     })
     precio: number;
+
+    @ManyToOne(type=>DistribuidorEntity, distribuidor=>distribuidor.tragos)
+    distribuidorId: DistribuidorEntity
+
+    @OneToMany( type => FiestaEntity, fiesta => fiesta)
+    fiestas: FiestaEntity[]
+
 }
 
 

@@ -4,8 +4,12 @@ import { AppService } from './app.service';
 import {TragosModule} from "./tragos/tragos.module";
 import { TypeOrmModule } from '@nestjs/typeorm';
 import {TragosEntity} from "./tragos/tragos.entity";
+import {DistribuidorEntity} from "./tragos/distribuidor/distribuidor.entity";
+import {DistribuidorModule} from "./tragos/distribuidor/distribuidor.module";
+import {FiestaModule} from "./tragos/fiesta/fiesta.module";
+import {FiestaEntity} from "./tragos/fiesta/fiesta.entity";
 @Module({
-    imports: [TragosModule,
+    imports: [TragosModule,DistribuidorModule,FiestaModule,
         TypeOrmModule.forRoot({
             name: 'default',
             type: 'mysql',
@@ -15,7 +19,9 @@ import {TragosEntity} from "./tragos/tragos.entity";
             password: 'root',
             database: 'testweb',
             entities: [
-                TragosEntity
+                TragosEntity,
+                DistribuidorEntity,
+                FiestaEntity
             ],
             synchronize: true,
         }),
