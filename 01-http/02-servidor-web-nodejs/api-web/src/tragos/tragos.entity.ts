@@ -42,7 +42,7 @@ export class TragosEntity{
     @ManyToOne(type=>DistribuidorEntity, distribuidor=>distribuidor.tragos)
     distribuidorId: DistribuidorEntity
 
-    @OneToMany( type => FiestaEntity, fiesta => fiesta)
+    @OneToMany( type => FiestaEntity, fiesta => fiesta.tragoId)
     fiestas: FiestaEntity[]
 
 }
