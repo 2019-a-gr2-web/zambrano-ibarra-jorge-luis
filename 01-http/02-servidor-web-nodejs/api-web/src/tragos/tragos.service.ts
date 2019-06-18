@@ -18,27 +18,17 @@ export class TragosService {
             precio:1.75,
             tipo:'Cervezas'
         };
-        const objetoEntidad= this._tragosRepository.create(traguito);
-        this._tragosRepository.save(objetoEntidad)
-            .then(
-                (datos)=>{
-                    console.log('Dato creado:', datos)
-                }
 
-            )
-            .catch(
-                (error)=>{
-                    console.log('Error:', error)
-                }
-            )
-        ;
+
+        console.log('linea 1');
+
+        console.log('linea 4');
 
     }
-    crear(nuevoTrago: Tragos):Tragos {
-        nuevoTrago.id= this.recnum;
-        this.recnum++;
-        this.bddTragos.push(nuevoTrago);
-        return nuevoTrago;
+    crear(nuevoTrago: Tragos):Promise<Tragos> {
+        const objetoEntidad= this._tragosRepository.create(nuevoTrago);
+        return this._tragosRepository.save(objetoEntidad);//promesa
+
     }
     // @ts-ignore
     buscarPorId(id: number):Tragos{
@@ -47,6 +37,9 @@ export class TragosService {
                 return trago.id===id;
             }
         );
+    }
+    buscar(parametrosBusqueda?):Promise<Tragos[]>{
+        return this._tragosRepository.find(parametrosBusqueda);
     }
     // @ts-ignore
     buscarPorNombre(nombre: string):Tragos{
