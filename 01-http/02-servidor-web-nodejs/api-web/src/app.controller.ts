@@ -1,4 +1,19 @@
-import {Controller, Delete, Get, Header, HttpCode, Post, Put, Headers, Query, Param, Body, Request, Response} from '@nestjs/common';
+import {
+    Controller,
+    Delete,
+    Get,
+    Header,
+    HttpCode,
+    Post,
+    Put,
+    Headers,
+    Query,
+    Param,
+    Body,
+    Request,
+    Response,
+    Session, Res
+} from '@nestjs/common';
 import { AppService } from './app.service';
 import * as Joi from '@hapi/joi';
 // http://192.168.1.10:3000''/mascotas/crear
@@ -135,7 +150,57 @@ export class AppController {
 
         })
     }
-
+    @Get('session')
+    session(
+        @Query('nombre') nombre,
+        @Session() session
+    ){
+        console.log(session);
+        session.autenticado=true;
+        session.nombreUsuari=nombre;
+        return 'ok';
+    }
+    @Get('login')
+    loginVista(
+        @Res() res
+    ){
+        res.render('login')
+    }
+    @Post('login')
+    login(
+        @Body() usuario,
+        @Res() res,
+        @Session() session
+    ){
+        if (usuario.username==='jorge'&& usuario.password==='12345678'){
+            session.username=usuario.username;
+            res.redirect('/api/protegida')
+        }else{
+            res.status(400);
+            res.send({mensaje: 'Error login', error:400});
+        }
+    }
+    @Get('protegida')
+    protegida(
+        @Session() session,
+        @Res() res
+    ){
+        if(session.username){
+            res.render('protegida',{
+                nombre:session.username});
+        }else{
+            res.redirect('/api/login');
+        }
+    }
+    @Get('logout')
+    logout(
+        @Res() res,
+        @Session() session
+    ){
+        session.username=undefined;
+        session.destroy();
+        res.redirect('/api/login');
+    }
 
 
 

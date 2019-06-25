@@ -1,4 +1,4 @@
-import {Controller, Get, Post, Res, Body, Query} from "@nestjs/common";
+import {Controller, Get, Post, Res, Body, Query, Param} from "@nestjs/common";
 import {TragosService} from "./tragos.service";
 import {Tragos} from "./interfaces/tragos";
 import {TragosCreateDto} from "./dto/tragos.create.dto";
@@ -63,13 +63,24 @@ export class TragosController {
 
     }
 
-    @Post('eliminar')
-    eliminarTrago(@Res() res,
-                  @Body('id') id: number) {
-
-        this._tragosService.eliminarPorId(Number(id));
-        res.redirect('/api/traguito/lista');
+   @Post('eliminar')
+    async borrar(
+       @Body('id') id: number,
+        @Res() response
+    ) {
+        try {
+            const tragoAbuscar = await this._tragosService.buscarPorId(+id);
+            await this._tragosService.eliminarId(Number(id));
+            response.redirect('/api/traguito/lista');
+        }
+        catch
+            (e) {
+            console.error(e);
+            response.status(500);
+            response.send({mensaje: 'Error', codigo: 500});
+        }
     }
+
 
 
 }
