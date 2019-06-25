@@ -30,17 +30,27 @@ export class TragosService {
         return this._tragosRepository.save(objetoEntidad);//promesa
 
     }
-    // @ts-ignore
-    buscarPorId(id: number):Tragos{
-        this.bddTragos.find(
-            (trago)=>{
-                return trago.id===id;
-            }
-        );
+    eliminarId(id: number): Promise<TragosEntity>{
+        const tragoaEliminar = this._tragosRepository
+            .create({
+                id: id
+            });
+
+        return this._tragosRepository.remove(tragoaEliminar)
+
+
     }
+    // @ts-ignore
+
+    buscarPorId(idTrago: number): Promise<TragosEntity> {
+        return this._tragosRepository.findOne(idTrago);
+    }
+
     buscar(parametrosBusqueda?):Promise<Tragos[]>{
         return this._tragosRepository.find(parametrosBusqueda);
     }
+
+
     // @ts-ignore
     buscarPorNombre(nombre: string):Tragos{
         this.bddTragos.find(
