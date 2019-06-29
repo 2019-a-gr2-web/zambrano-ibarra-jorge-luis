@@ -25,7 +25,10 @@
             <td> <%= trago.precio %> </td>
             <td> <%= trago.tipo %> </td>
             <td>
+                <a href="/api/traguito/editar/<%= trago.id %>">
+                    <input id="id" name="id" type="number" value="<%= trago.id %>"  hidden >
                 <button>Editar</button>
+                </a>
                 <form action="/api/traguito/eliminar" method="post">
                     <input id="id" name="id" type="number" value="<%= trago.id %>"  hidden >
                     <button>Eliminar</button>

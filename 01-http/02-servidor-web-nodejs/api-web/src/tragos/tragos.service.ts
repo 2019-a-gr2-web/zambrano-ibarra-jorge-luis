@@ -69,7 +69,17 @@ export class TragosService {
         this.bddTragos.splice(indice,1);
         return this.bddTragos;
     }
-    actualizar(tragoActualizado: Tragos, id:number):Tragos[]{
+
+    actualizar(idTrago: number,
+               nuevoTrago: Tragos): Promise<TragosEntity> {
+
+        nuevoTrago.id = idTrago;
+
+        const tragoEntity = this._tragosRepository.create(nuevoTrago);
+
+        return this._tragosRepository.save(tragoEntity);
+    }
+    actualizar1(tragoActualizado: Tragos, id:number):Tragos[]{
         const indice= this.bddTragos.findIndex(
             (trago)=>{
                 return trago.id===id

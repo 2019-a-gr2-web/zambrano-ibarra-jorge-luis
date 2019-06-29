@@ -1,38 +1,52 @@
-
-<%-include('../componentes/menus/menu')%>
+<%- include('../componentes/menus/menu') %>
 <% const existeMensaje = mensaje %>
-<%if(existeMensaje){%>
+<% if(existeMensaje){ %>
     <p>ERROR EN FORMULARIO!! </p>
-<%}%>
+<% } %>
+<% const arreglo = ['Ron', 'Vodka', 'Tequila', 'Whiskey', 'Puntas', 'Cervezas'] %>
+<% const arregloValues = ['Roncito', 'Vodkita', 'Tequilita', 'Whiskicito', 'Puntitas', 'Chelitas'] %>
+<% var creando = typeof trago === "undefined" ? true : false; %>
+<h1> <%= creando ? 'Crear' : 'Actualizar' %> Trago</h1>
+<p><%= creando ? 'Creando' : 'Actualizando' %> un trago.</p>
 
 
-
-<h1>Formulario de Creación</h1>
-<p>Crea un nuevo trago.</p>
-<form action="/api/traguito/crear"
+<form action="/api/traguito/<%= creando ? 'crear' : 'actualizar' %>-trago/<%= creando ? '' : trago.id %>"
       method="post">
 
     <label for="nombreId">Nombre</label>
-    <input id="nombreId" name="nombre" type="text">
+    <input id="nombreId" name="nombre" type="text" value="<%= creando ? '' : trago.nombre %>">
     <br>
     <label for="tipoIdo">Tipo Trago</label>
     <select name="tipo" id="tipoId">
-        <option value="Ron">Roncito</option>
-        <option value="Vodka">Vodkita</option>
-        <option value="Tequila">Tequilita</option>
-        <option value="Whiskey" selected>Whiskycito</option>
-        <option value="Puntas">Puntitas</option>
-        <option value="Cerveza">Chelitas</option>
+        <% if(creando){ %>
+            <% arreglo.forEach((opcion)=>{ %>
+
+                <option value="<%= opcion %>">
+
+                    <%= opcion %></option>
+            <% }) %>
+
+        <% }else{ %>
+            <% arreglo.forEach((opcion)=>{ %>
+                <option value="<%= opcion %>"
+                <% if(trago.tipo.toString() == opcion){ %>
+                        selected
+                        <% } %>
+                ><%= opcion %></option>
+            <% }) %>
+        <% } %>
+
     </select>
     <br>
     <label for="gradosId">Grados de alchool</label>
-    <input id="gradosId" name="gradosAlcohol" type="number" min="0" max="100" step="0.01">
+    <input id="gradosId" name="gradosAlcohol" type="number" min="0" max="100" step="0.01"
+           value="<%= creando ? '' : trago.gradosAlcohol %>">
     <br>
     <label for="fechaId">Fecha de Caducidad</label>
-    <input id="fechaId" name="fechaCaducidad" type="date">
+    <input id="fechaId" name="fechaCaducidad" type="date" value="<%= creando ? '' : trago.fechaCaducidad %>">
     <br>
     <label for="precioId">Precio</label>
-    <input id="precioId" name="precio" type="number" min="0"  step="0.01">
+    <input id="precioId" name="precio" type="number" min="0" step="0.01" value="<%= creando ? '' : trago.precio %>">
     <br>
     <!--<button type="reset">Reset</button>-->
     <!--<button type="submit">Submit</button>-->
@@ -41,4 +55,4 @@
     </a>
     <button>Enviar Informacion</button>
 </form>
-<%-include('../componentes/footer/footer')%>
+<%- include('../componentes/footer/footer') %>
