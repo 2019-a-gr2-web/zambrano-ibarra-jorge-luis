@@ -81,6 +81,46 @@ export class TragosController {
         }
     }
 
+    @Get('editar/:id')
+    async actualizarTrago(
+        @Param('id') id: string,
+        @Res() response,
+        @Query('mensaje') mensaje:string
+    ) {
+
+        console.log(Number(id));
+       const tragoAActualizar = await this
+            ._tragosService
+            .buscarPorId(Number(id));
+        console.log('trago', tragoAActualizar.nombre);
+
+        return response.render(
+            'tragos/crear-editar',
+            {mensaje: mensaje,
+            trago: tragoAActualizar})
+
+
+
+    }
+
+
+    @Post('actualizar-trago/:id')
+    async actualizarTragoForm(
+        @Param('id') id: string,
+        @Res() response,
+        @Body() trago: Tragos
+    ) {
+        trago.id = +id;
+
+        await this._tragosService.actualizar(+id, trago);
+
+
+
+        response.redirect('/api/traguito/lista');
+
+    }
+
 
 
 }
+let id: number;
