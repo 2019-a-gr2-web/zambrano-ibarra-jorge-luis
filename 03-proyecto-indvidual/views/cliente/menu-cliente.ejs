@@ -1,0 +1,26 @@
+<% const titulo="Menu Cliente"%>
+<%- include('../fragments/header',{titulo:titulo})%>
+<div class="container">
+    <div class="centerDiv">
+        <div class="divLogin white" >
+            <div class= "text-center" style="margin-bottom: 10px">
+                <h2 style="color:black"><%=titulo%></h2>
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+                <a href="/aventura/cliente/crear">
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </a>
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Consultar</button>
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('../fragments/footer')%>
