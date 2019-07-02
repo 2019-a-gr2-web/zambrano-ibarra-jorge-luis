@@ -1,0 +1,72 @@
+form{
+    margin:0
+}
+body.blackBg{
+    background: #000;
+}
+.white{
+    color: #FFF;
+}
+.wallpaper{
+    background: url("/imagenes/inicio/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+.centerDiv{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.padTop{
+    margin-top: 3%;
+}
+.centerDivH{
+    position: absolute;
+    left: 32%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+.wid{
+    width: 600%;
+}
+.divLogin{
+    padding: 3em;
+    display: inline-block;
+    border: solid 2px #000000;
+    background-color: #f8ffff;
+}
+.divInicioContainer{
+    padding: 1em;
+    display: inline-block;
+    border: solid 2px #000000;
+    background:linear-gradient(rgb(0, 255, 139), rgba(0, 255, 231, 0.8));
+}
+.bord{
+    border:solid red 10px;
+}
+.left{
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+.mini{
+    width: auto;
+    height: 7em;
+    padding-left: 2%;
+    vertical-align: middle;
+}
+.divInicio{
+    padding: 2em;
+    display: inline-block;
+    border: solid 2px #000000;
+    opacity: 1;
+    background-color: #00ff66;
+}
+.foot{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

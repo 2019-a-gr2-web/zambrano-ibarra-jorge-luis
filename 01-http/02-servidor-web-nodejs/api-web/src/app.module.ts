@@ -8,9 +8,10 @@ import {DistribuidorEntity} from "./tragos/distribuidor/distribuidor.entity";
 import {DistribuidorModule} from "./tragos/distribuidor/distribuidor.module";
 import {FiestaModule} from "./tragos/fiesta/fiesta.module";
 import {FiestaEntity} from "./tragos/fiesta/fiesta.entity";
+import {ChatModule} from "./chat/chat.module";
 @Module({
-    imports: [TragosModule,DistribuidorModule,FiestaModule,
-        TypeOrmModule.forRoot({
+    imports: [/* TragosModule,DistribuidorModule,FiestaModule,
+       TypeOrmModule.forRoot({
             name: 'default',
             type: 'mysql',
             host: 'localhost',
@@ -24,7 +25,8 @@ import {FiestaEntity} from "./tragos/fiesta/fiesta.entity";
                 FiestaEntity
             ],
             synchronize: true,
-        }),
+        }),*/
+       ChatModule
     ],
     controllers: [AppController],
     providers: [AppService],
