@@ -1,0 +1,82 @@
+<% const titulo = "Gestionar Cliente" %>
+<%- include('../fragments/header',{titulo:titulo}) %>
+<style>
+    table, tr, td, th {
+        border: solid black 1px;
+    }
+</style>
+<div class="container" style="margin-top:10px">
+    <div class="centerDiv">
+        <div class="divLogin white">
+            <div class="text-center" style="margin-bottom: 10px">
+                <h2 style="color:black"><%= titulo %></h2>
+            </div>
+            <form action="/aventura/cliente/buscarCedula" method="get">
+                <div class="form-group row justify-content-center">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group ">
+
+                                <input class="mt-4 form-control" id="busquedaCliente" name="busquedaCliente" type="text">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <button type="submit" class="mt-4 btn btn-primary">Buscar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div class="col-md-12">
+                <table class="ml-5">
+                    <tr>
+                        <th>Cédula</th>
+                        <th>Nombre</th>
+                        <th>Direccion</th>
+                        <th>Telefono</th>
+
+                        <th>Acciones</th>
+                    </tr>
+                    <% arregloCliente.forEach((cliente)=>{ %>
+                        <tr>
+                            <td> <%= cliente.cedulaCliente %></td>
+                            <td> <%= cliente.nombreCliente %></td>
+                            <td> <%= cliente.direccionCliente %></td>
+                            <td> <%= cliente.telefonoCliente %></td>
+
+                            <td>
+                                <a href="/aventura/cliente/editar/<%= cliente.idCliente %>">
+                                    <input id="idCliente" name="idCliente" type="number"
+                                           value="<%= cliente.idCliente %>" hidden>
+                                    <button>Editar</button>
+                                </a>
+                                <form action="/aventura/cliente/eliminar" method="post">
+                                    <input id="idCliente" name="idCliente" type="number"
+                                           value="<%= cliente.idCliente %>" hidden>
+                                    <button type="submit">Borrar</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                    <% }) %>
+                </table>
+                <br>
+                <div class=" d-flex justify-content-center">
+                    <a href="/aventura/cliente/crear">
+                        <button type="submit" class="btn btn-primary">Crear</button>
+                    </a>
+                    <a class="ml-2" href="/aventura/inicio">
+                        <button class="btn btn-danger">Cancelar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+<%- include('../fragments/footer') %>

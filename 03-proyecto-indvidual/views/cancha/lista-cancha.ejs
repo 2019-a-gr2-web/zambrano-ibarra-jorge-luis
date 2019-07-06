@@ -1,0 +1,82 @@
+<% const titulo = "Gestionar Canchas" %>
+<%- include('../fragments/header',{titulo:titulo}) %>
+<style>
+    table, tr, td, th {
+        border: solid black 1px;
+    }
+</style>
+<div class="container" style="margin-top:10px">
+    <div class="centerDiv">
+        <div class="divLogin white">
+            <div class="text-center" style="margin-bottom: 10px">
+                <h2 style="color:black"><%= titulo %></h2>
+            </div>
+            <form action="/aventura/cancha/buscarNumero" method="get">
+                <div class="form-group row justify-content-center">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group ">
+
+                                <input class="mt-4 form-control" id="busquedaCancha" name="busquedaCancha" type="text">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <button type="submit" class="mt-4 btn btn-primary">Buscar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div class="col-md-12">
+                <table class="ml-5">
+                    <tr>
+                        <th>Número</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Metros 2</th>
+
+                        <th>Acciones</th>
+                    </tr>
+                    <% arregloCancha.forEach((cancha)=>{ %>
+                        <tr>
+                            <td> <%= cancha.numeroCancha %></td>
+                            <td> <%= cancha.descripcionCancha %></td>
+                            <td> <%= cancha.precioCancha %></td>
+                            <td> <%= cancha.metroscCancha %></td>
+
+                            <td>
+                                <a href="/aventura/cancha/editar/<%= cancha.idCancha %>">
+                                    <input id="idCancha" name="idCancha" type="number"
+                                           value="<%= cancha.idCancha %>" hidden>
+                                    <button>Editar</button>
+                                </a>
+                                <form action="/aventura/cancha/eliminar" method="post">
+                                    <input id="idCancha" name="idCancha" type="number"
+                                           value="<%= cancha.idCancha %>" hidden>
+                                    <button type="submit">Borrar</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                    <% }) %>
+                </table>
+                <br>
+                <div class=" d-flex justify-content-center">
+                    <a href="/aventura/cancha/crear">
+                        <button type="submit" class="btn btn-primary">Crear</button>
+                    </a>
+                    <a class="ml-2" href="/aventura/inicio">
+                        <button class="btn btn-danger">Cancelar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+<%- include('../fragments/footer') %>
