@@ -24,6 +24,12 @@
             }
            //nombre del evento
         );
+        socket.on(
+            'saludaron', // nombre del evento
+            (data) => {
+                console.log('Nos saludaron.', data);
+            }
+        );
 
         socket.off(
             'disconnect',
