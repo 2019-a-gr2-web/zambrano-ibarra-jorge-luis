@@ -1,0 +1,66 @@
+
+<img src="/api/descargarArchivo/<%=idTrago%>"
+     alt=""
+     width="300px"
+     height="300px"
+>
+
+<a href=/api/descargarArchivo/<%=idTrago%>" target="_blank">
+    Descargar Archivo
+</a>
+<form action="/api/subirArchivo/<%=idTrago%>" method="post" enctype="multipart/form-data">
+    <label id="texto-archivo" for="archivo" class="boton boton-sin-seleccion">Seleccionar Archivo</label>
+    <input id="archivo" type="file" name="imagen" accept=".pptx, .jpg" hidden onchange="validarArchivo()" multiple>
+    <input id="imagen-muestra" type="file" name="imagen" accept=".pptx, .jpg" hidden onchange="validarArchivo()" multiple>
+    <button>Subir archivo</button>
+    <script>
+        function validarArchivo(){
+            const archivo = document.getElementById('archivo');
+            console.log(archivo.files)
+            if(archivo.files.length >0){
+                const label= document.getElementById('texto-archivo')
+                label.className='boton boton-seleccionado'
+                label.innerText='Archivo Seleccionado'
+
+                ///// EMPIEZA
+                const file = archivo.files[0];
+                const reader = new FileReader();
+                reader.onload = (eventoLecturaArchivo) => {
+                    console.log(eventoLecturaArchivo.target.result);
+                    const url = eventoLecturaArchivo.target.result;
+
+                    const imagenMuestra = document.getElementById('imagen-muestra');
+                    imagenMuestra.src = url;
+
+                };
+                reader.readAsDataURL(file);
+                //// TERMINA
+
+
+
+            }else{
+                label.className='boton boton-sin-seleccion'
+                label.innerText='Seleccionar Archivos'
+
+
+
+            }
+        }
+    </script>
+
+    <style>
+        .boton-seleccionado{
+            color: black;
+            background-color: #00ff66;
+        }
+        .boton-sin-seleccion{
+            color : white;
+            background-color: black;
+        }
+        .boton{
+            border: solid black 2px;
+
+        }
+    </style>
+
+</form>
