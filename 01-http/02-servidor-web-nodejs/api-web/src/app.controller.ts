@@ -12,10 +12,11 @@ import {
     Body,
     Request,
     Response,
-    Session, Res
+    Session, Res, Render, UseInterceptors, UploadedFile
 } from '@nestjs/common';
 import { AppService } from './app.service';
 import * as Joi from '@hapi/joi';
+import {FileInterceptor} from "@nestjs/platform-express";
 // http://192.168.1.10:3000''/mascotas/crear
 // @ts-ignore
 // @ts-ignore
@@ -211,6 +212,41 @@ export class AppController {
         })
     }
 
+    @Get('/subirArchivo/:idTrago')
+    @Render('archivo')
+    subirArchivo(@Param('idTrago') idTrago
+                 ){
+        return{
+            idTrago: idTrago
+        };
+
+    }
+    @Post('/subirArchivo/:idTrago')
+    @UseInterceptors(
+        FileInterceptor('imagen',
+            {
+                dest: __dirname+'/../archivos'
+            }
+            )
+    )
+    subirArchivoPost(@Param('idTrago') idTrago,
+                     @UploadedFile() archivo
+    ){
+            console.log(archivo);
+            return {mensaje: 'ok'};
+
+    }
+
+    @Get('descargarArchivo/:idTrago')
+    descargarArchivo(
+        @Res() res,
+        @Param('idTrago') idTrago
+    ) {
+        const originalname = 'descarga.jpg';
+        const path = 'C:\\Users\\ZAMBRANO ' +
+            'JORGE\\Documents\\GITHUB\\web-zambrano-ibarra-jorge-luis\\01-http\\02-servidor-web-nodejs\\api-web\\archivos\\f3217c9db0ec1f4a51037e96724aac5d'
+        res.download(path, originalname);
+    }
 
 
 
