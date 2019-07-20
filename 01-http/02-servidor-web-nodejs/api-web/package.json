@@ -20,6 +20,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@chrisoakman/chessboardjs": "^1.0.0",
     "@hapi/joi": "^15.0.0",
     "@nestjs/common": "^6.0.0",
     "@nestjs/core": "^6.0.0",
@@ -28,6 +29,7 @@
     "@nestjs/typeorm": "^6.1.2",
     "@nestjs/websockets": "^6.4.0",
     "@types/serve-favicon": "^2.2.30",
+    "chess.js": "^0.10.2",
     "class-validator": "^0.9.1",
     "cookie-parser": "^1.4.4",
     "ejs": "^2.6.1",

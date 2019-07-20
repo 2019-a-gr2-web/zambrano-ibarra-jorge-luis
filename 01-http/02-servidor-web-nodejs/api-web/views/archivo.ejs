@@ -1,17 +1,16 @@
 
-<img src="/api/descargarArchivo/<%=idTrago%>"
+<img id="imagen-muestra" src="/api/descargarArchivo/<%=idTrago%>"
      alt=""
      width="300px"
      height="300px"
 >
 
-<a href=/api/descargarArchivo/<%=idTrago%>" target="_blank">
+<a  href=/api/descargarArchivo/<%=idTrago%>" target="_blank">
     Descargar Archivo
 </a>
 <form action="/api/subirArchivo/<%=idTrago%>" method="post" enctype="multipart/form-data">
     <label id="texto-archivo" for="archivo" class="boton boton-sin-seleccion">Seleccionar Archivo</label>
     <input id="archivo" type="file" name="imagen" accept=".pptx, .jpg" hidden onchange="validarArchivo()" multiple>
-    <input id="imagen-muestra" type="file" name="imagen" accept=".pptx, .jpg" hidden onchange="validarArchivo()" multiple>
     <button>Subir archivo</button>
     <script>
         function validarArchivo(){
