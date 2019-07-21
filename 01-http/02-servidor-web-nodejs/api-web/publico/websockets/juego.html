@@ -4,153 +4,193 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>WebSockets</title>
+    <title>Trivia</title>
 </head>
 <body>
 <style>
-    .padT{
+    .padT {
         margin-top: 3%;
     }
 </style>
-<h1 id="titulo">Trivia</h1>
-<p class="par">Responde bien y gana</p>
-<label for="nombre">Jugador: </label>
-<input type="text" id="nombre" onchange="cambiarNombre(this)">
-
 <div class="row">
-    <div class="col-sm-6">
-        <h4 id="pregunta"></h4>
-        <div class="row">
-            <div class="col sm-6">
-                <button id="btn1" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled></button>
-            </div>
-            <div class="col sm-6">
-                <button id="btn2" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled></button>
+    <div class="col-sm-9">
+        <br>
+        <h2 class="d-flex justify-content-center" id="titulo" style="color: #0070E0">Trivia EPN</h2>
+        <br>
+        <h3 class="d-flex justify-content-center" style="color: #4CAF50">Responde bien y gana una décima en WEB</h3>
+        <br>
+        <div class="row d-flex justify-content-center">
+            <div class="form-group row">
+                <label for="nombre" class="form-control-label col-sm-2" style="color: orangered">Jugador: </label>
+                <div class="col-sm-9" style="margin-left: 15px">
+                    <input class="text-center" type="text" id="nombre" onchange="cambiarNombre(this)">
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col sm-6">
-                <button id="btn3" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled></button>
+        <br>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-6">
+                <div class="row d-flex justify-content-center">
+                    <h4 id="pregunta">Escoge una opción para responder</h4>
+                </div>
+                <div class="row">
+                    <div class="col sm-6">
+                        <button id="btn1" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled>A
+                        </button>
+                    </div>
+                    <div class="col sm-6">
+                        <button id="btn2" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled>B
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col sm-6">
+                        <button id="btn3" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled>C
+                        </button>
+                    </div>
+                    <div class="col sm-6">
+                        <button id="btn4" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled>D
+                        </button>
+                    </div>
+                </div>
+
             </div>
-            <div class="col sm-6">
-                <button id="btn4" class="btn btn-dark btn-block padT" onclick="escoger(this)" disabled></button>
-            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="d-flex justify-content-center" style="display: none">
+
+            <button id="sPregunta" onclick="preparar(contador)" class="btn btn-primary"
+                    style="display: none">Siguiente pregunta
+            </button>
         </div>
     </div>
 
-    <div id="contenedor-chat col-sm-6">
-        <h4>Puntajes</h4>
-        <h5 id="nombre1">Player 1</h5>
-        <p id="puntaje1"></p>
-        <h5 id="nombre2">Player 2</h5>
-        <p id="puntaje2"></p>
+    <div id="contenedor-chat col-sm-3" style="margin-rigth: 5px; margin-top: 100px">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container-fluid" style="border:2px solid #cecece;">
+            <h4 style="color: #0070E0">Puntajes</h4>
+            <h5  style="color: orangered" id="nombre1">Player 1</h5>
+            <p id="puntaje1"></p>
+            <h5 style="color: #4CAF50" id="nombre2">Player 2</h5>
+            <p id="puntaje2"></p>
+        </div>
     </div>
+
 </div>
 
 
-<button id="sPregunta" onclick="preparar(contador)" style="display: none">Siguiente pregunta</button>
-
 <script>
 
-    function cambiarNombre(elemento){
+    function cambiarNombre(elemento) {
         const hnombre = document.getElementById("nombre1");
-        hnombre.innerText=elemento.value;
+        hnombre.innerText = elemento.value;
         preparar(contador);
     }
 
-    const trivia ={
-        preguntas:[
+    const trivia = {
+        preguntas: [
             {
-                "p1":"¿Qué inge es más chévere?",
-                "r1":"Web",
-                "r2":"Moviles",
-                "r3":"JavaScript",
-                "r4":"Paiton",
-                "rc":"Paiton"
+                "p1": "¿Qué inge es más chévere?",
+                "r1": "Web",
+                "r2": "Moviles",
+                "r3": "JavaScript",
+                "r4": "Paiton",
+                "rc": "Paiton"
             },
             {
-                "p1":"¿Cuanto es 2+2?",
-                "r1":"4",
-                "r2":"Messi",
-                "r3":"GRANDE EL BOKITA",
-                "r4":"Para que quieres saber eso jsjsjsjs salu2",
-                "rc":"4"
+                "p1": "¿Cuanto es 2+2?",
+                "r1": "4",
+                "r2": "Messi",
+                "r3": "GRANDE EL BOKITA",
+                "r4": "Para que quieres saber eso",
+                "rc": "4"
             },
             {
-                "p1":"Escoga la opción correcta: Quiero comer. . .",
-                "r1":"amborgueza",
-                "r2":"Jamvurguesa",
-                "r3":"Anvurgeza",
-                "r4":"Hamburguesa",
-                "rc":"Anvurgeza"
+                "p1": "Escoga la opción correcta: Quiero comer. . .",
+                "r1": "amborgueza",
+                "r2": "Jamvurguesa",
+                "r3": "Anvurgeza",
+                "r4": "Hamburguesa",
+                "rc": "Anvurgeza"
             },
             {
-                "p1":"¿Cuanto es 2+3?",
-                "r1":"5 xd",
-                "r2":"Messi",
-                "r3":"GRANDE EL BOKITA",
-                "r4":"Para que quieres saber eso jsjsjsjs salu2",
-                "rc":"5 xd"
+                "p1": "¿Cuanto es 2+3?",
+                "r1": "5 xd",
+                "r2": "Messi",
+                "r3": "GRANDE EL BOKITA",
+                "r4": "No se",
+                "rc": "5 xd"
             }
         ]
     };
-    var contador =-1;
-    var puntos=0;
+    var contador = -1;
+    var puntos = 0;
 
-    function preparar(numero){
-        console.log("Numero A: "+numero);
+    function preparar(numero) {
+        console.log("Numero A: " + numero);
         numero++;
-        console.log("Numero D: "+numero);
+        console.log("Numero D: " + numero);
         const pregunta = document.getElementById("pregunta");
-        pregunta.innerText=trivia.preguntas[numero].p1;
+        pregunta.innerText = trivia.preguntas[numero].p1;
         const btn1 = document.getElementById("btn1");
         const btn2 = document.getElementById("btn2");
         const btn3 = document.getElementById("btn3");
         const btn4 = document.getElementById("btn4");
-        btn1.innerText= trivia.preguntas[numero].r1;
-        btn2.innerText= trivia.preguntas[numero].r2;
-        btn3.innerText= trivia.preguntas[numero].r3;
-        btn4.innerText= trivia.preguntas[numero].r4;
-        btn1.className="btn btn-dark btn-block padT";
-        btn2.className="btn btn-dark btn-block padT";
-        btn3.className="btn btn-dark btn-block padT";
-        btn4.className="btn btn-dark btn-block padT";
+        btn1.innerText = trivia.preguntas[numero].r1;
+        btn2.innerText = trivia.preguntas[numero].r2;
+        btn3.innerText = trivia.preguntas[numero].r3;
+        btn4.innerText = trivia.preguntas[numero].r4;
+        btn1.className = "btn btn-dark btn-block padT";
+        btn2.className = "btn btn-dark btn-block padT";
+        btn3.className = "btn btn-dark btn-block padT";
+        btn4.className = "btn btn-dark btn-block padT";
         btn1.removeAttribute("disabled");
         btn2.removeAttribute("disabled");
         btn3.removeAttribute("disabled");
         btn4.removeAttribute("disabled");
-        document.getElementById("sPregunta").style="display:none";
+        document.getElementById("sPregunta").style = "display:none";
     }
 
-    function escoger(seleccion){
+    function escoger(seleccion) {
         contador++;
         const escogido = seleccion.innerText;
         const correcto = trivia.preguntas[contador].rc;
         console.log(escogido);
         console.log(correcto);
-        if(escogido==correcto){
+        if (escogido == correcto) {
             console.log("Entro");
-            seleccion.className="btn btn-primary btn-block padT";
+            seleccion.className = "btn btn-primary btn-block padT  ";
             puntos++;
-        }else {
+        } else {
             seleccion.className = "btn btn-danger btn-block padT";
 
         }
-        document.getElementById("puntaje1").innerText=puntos;
+        document.getElementById("puntaje1").innerText = puntos;
         const btn1 = document.getElementById("btn1");
         const btn2 = document.getElementById("btn2");
         const btn3 = document.getElementById("btn3");
         const btn4 = document.getElementById("btn4");
-        btn1.setAttribute("disabled",true);
-        btn2.setAttribute("disabled",true);
-        btn3.setAttribute("disabled",true);
-        btn4.setAttribute("disabled",true);
-        if(contador==trivia.preguntas.length-1){
-            document.getElementById("sPregunta").style="display:none";
-        }else
-            document.getElementById("sPregunta").style="display:block";
+        btn1.setAttribute("disabled", true);
+        btn2.setAttribute("disabled", true);
+        btn3.setAttribute("disabled", true);
+        btn4.setAttribute("disabled", true);
+        if (contador == trivia.preguntas.length - 1) {
+            console.log(contador)
+            console.log(trivia.preguntas.length - 1)
+            document.getElementById("sPregunta").style = "display:none";
+        } else {
+
+            document.getElementById("sPregunta").style = "display:block";
+        }
         peticionTrivia()
     }
 </script>
@@ -158,46 +198,45 @@
 <script src="socket.io.js"></script>
 <script>
     //const url='http://172.31.103.217:3001/websockets';
-    const url='http://localhost:3001/websockets';
+    const url = 'http://localhost:3001/websockets';
     const socket = io(url);
     socket.on(
         'connect',
-        ()=>{
+        () => {
             console.log("Estamos conectados!!");
         }
     );
     socket.on(
         'disconnect',
-        ()=>{
+        () => {
             console.log('Nos desconectamos 😞');
         }
     );
 
 
-
     socket.on(
         'respuesta',
-        (data)=>{
+        (data) => {
             const puntaje = document.getElementById("puntaje2");
             const nombre2 = document.getElementById("nombre2");
-            nombre2.innerText=data.name;
+            nombre2.innerText = data.name;
             console.log("Hola");
-            puntaje.innerText=data.puntaje;
+            puntaje.innerText = data.puntaje;
         }
     );
 
-    function peticionTrivia(){
+    function peticionTrivia() {
         console.log('asdf')
-        const metodo='trivia';
+        const metodo = 'trivia';
         const nombre = document.getElementById("nombre1").innerText;
-        const datos={
-            name:nombre,
-            puntaje:puntos
+        const datos = {
+            name: nombre,
+            puntaje: puntos
         };
         socket.emit(
             metodo,
             datos,
-            (respuesta)=>{
+            (respuesta) => {
                 console.log(respuesta);
             }
         )
