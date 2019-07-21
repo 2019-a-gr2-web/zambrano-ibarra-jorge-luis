@@ -9,6 +9,7 @@ import {DistribuidorModule} from "./tragos/distribuidor/distribuidor.module";
 import {FiestaModule} from "./tragos/fiesta/fiesta.module";
 import {FiestaEntity} from "./tragos/fiesta/fiesta.entity";
 import {ChatModule} from "./chat/chat.module";
+import {JuegoModule} from "./juego/juego.module";
 @Module({
     imports: [/* TragosModule,DistribuidorModule,FiestaModule,
        TypeOrmModule.forRoot({
@@ -26,7 +27,9 @@ import {ChatModule} from "./chat/chat.module";
             ],
             synchronize: true,
         }),*/
-       ChatModule
+       ChatModule,
+        JuegoModule
+
     ],
     controllers: [AppController],
     providers: [AppService],

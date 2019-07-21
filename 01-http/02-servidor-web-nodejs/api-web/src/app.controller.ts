@@ -242,9 +242,8 @@ export class AppController {
         @Res() res,
         @Param('idTrago') idTrago
     ) {
-        const originalname = 'descarga.jpg';
-        const path = 'C:\\Users\\ZAMBRANO ' +
-            'JORGE\\Documents\\GITHUB\\web-zambrano-ibarra-jorge-luis\\01-http\\02-servidor-web-nodejs\\api-web\\archivos\\f3217c9db0ec1f4a51037e96724aac5d'
+        const originalname = '1546ce23-f9c8-4014-879b-8002ea3cca7c.jpg';
+        const path ='D:\\Documentos\\Github\\web-zambrano-ibarra-jorge-luis\\01-http\\02-servidor-web-nodejs\\api-web\\archivos\\311908214d36e100193e4450072a4e58'
         res.download(path, originalname);
     }
 
