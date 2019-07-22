@@ -1,4 +1,4 @@
-<% const titulo = "Gestionar Cliente" %>
+<% const titulo = "Gestionar Reservas" %>
 <%- include('../fragments/header',{titulo:titulo}) %>
 <style>
     table, tr, td, th {
@@ -11,13 +11,13 @@
             <div class="text-center" style="margin-bottom: 10px">
                 <h2 style="color:black"><%= titulo %></h2>
             </div>
-            <form action="/aventura/cliente/buscarCedula" method="get">
+            <form action="/aventura/reserva/buscarReserva" method="get">
                 <div class="form-group row justify-content-center">
                     <div class="row">
                         <div class="col-md-9">
                             <div class="form-group ">
 
-                                <input class="mt-4 form-control" id="busquedaCliente" name="busquedaCliente" type="text">
+                                <input class="mt-4 form-control" id="busquedaReserva" name="busquedaReserva" type="text">
 
                             </div>
                         </div>
@@ -33,29 +33,41 @@
             <div class="col-md-12">
                 <table class="ml-5">
                     <tr>
-                        <th>Cédula</th>
-                        <th>Nombre</th>
-                        <th>Direccion</th>
-                        <th>Telefono</th>
+                        <th>Número</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Num Cancha</th>
+                        <th>Hora Inicial</th>
+                        <th>Hora Final</th>
+                        <th>Total Horas</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+
 
                         <th>Acciones</th>
                     </tr>
-                    <% arregloCliente.forEach((cliente)=>{ %>
+                    <% arregloReserva.forEach((reserva)=>{ %>
                         <tr>
-                            <td> <%= cliente.cedulaCliente %></td>
-                            <td> <%= cliente.nombreCliente %></td>
-                            <td> <%= cliente.direccionCliente %></td>
-                            <td> <%= cliente.telefonoCliente %></td>
+                            <td> <%= reserva.idReserva %></td>
+                            <td> <%= reserva.fechaReserva %></td>
+                            <td> <%= reserva.cliente.cedulaCliente %></td>
+                            <td> <%= reserva.cancha.numeroCancha %></td>
+                            <td> <%= reserva.horaInicial %></td>
+                            <td> <%= reserva.horaFinal %></td>
+                            <td> <%= reserva.horaFinal-reserva.horaInicial %></td>
+                            <td> <%= reserva.cancha.precioCancha %></td>
+                            <td> <%= reserva.cancha.precioCancha *( reserva.horaFinal-reserva.horaInicial)%></td>
+
 
                             <td>
-                                <a href="/aventura/cliente/editar/<%= cliente.idCliente %>">
-                                    <input id="idCliente" name="idCliente" type="number"
-                                           value="<%= cliente.idCliente %>" hidden>
+                                <a href="/aventura/reserva/editar/<%= reserva.idReserva %>">
+                                    <input id="idReserva" name="idReserva" type="number"
+                                           value="<%= reserva.idReserva %>" hidden>
                                     <button class="btn btn-block btn-dark">Editar</button>
                                 </a>
-                                <form action="/aventura/cliente/eliminar" method="post">
-                                    <input id="idCliente" name="idCliente" type="number"
-                                           value="<%= cliente.idCliente %>" hidden>
+                                <form action="/aventura/reserva/eliminar" method="post">
+                                    <input id="idReserva" name="idReserva" type="number"
+                                           value="<%= reserva.idReserva %>" hidden>
                                     <button class="btn btn-block btn-danger" type="submit">Borrar</button>
                                 </form>
                             </td>
@@ -65,7 +77,7 @@
                 </table>
                 <br>
                 <div class=" d-flex justify-content-center">
-                    <a href="/aventura/cliente/crear">
+                    <a href="/aventura/reserva/crear">
                         <button type="submit" class="btn btn-primary">Crear</button>
                     </a>
                     <a class="ml-2" href="/aventura/inicio">

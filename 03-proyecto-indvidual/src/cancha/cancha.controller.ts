@@ -147,16 +147,43 @@ export class CanchaController{
     @Post('actualizar-cancha/:idCancha')
     async actualizarCanchaForm(
         @Param('idCancha') idCancha: string,
-        @Res() response,
+        @Res() res,
         @Body() cancha: CanchaEntity
     ) {
         cancha.idCancha = +idCancha;
 
-        await this._canchaServices.actualizar(+idCancha, cancha);
+        let canchaAAValidar = new CanchaCreateDto();
+
+        canchaAAValidar.descripcionCancha = cancha.descripcionCancha;
+        canchaAAValidar.numeroCancha = Number(cancha.numeroCancha);
+        canchaAAValidar.metroscCancha = Number(cancha.metroscCancha);
+        canchaAAValidar.precioCancha = Number(cancha.precioCancha);
+
+
+        console.log(cancha);
+        try {
+            const errores = await validate(canchaAAValidar);
+            if (errores.length > 0) {
+                console.error(errores);
+
+            } else {
+
+                const respuestaActualizar =  await this._canchaServices.actualizar(+idCancha, cancha);
+
+                console.log('RESPUESTA: ', respuestaActualizar);
+                res.redirect('/aventura/cancha/lista');
+
+
+            }
+        } catch
+            (e) {
+            console.error(e);
+            res.status(500);
+            res.send({mensaje: 'Error', codigo: 500});
+        }
 
 
 
-        response.redirect('/aventura/cancha/lista');
 
     }
 

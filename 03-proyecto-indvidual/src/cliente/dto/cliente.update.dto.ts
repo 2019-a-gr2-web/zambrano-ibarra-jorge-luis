@@ -17,6 +17,6 @@ export class ClienteUpdateDto{
     direccionCliente: string;
 
     @IsNotEmpty()
-    @IsString()
-    telefonoCliente: string;
+    @IsNumber()
+    telefonoCliente: number;
 }

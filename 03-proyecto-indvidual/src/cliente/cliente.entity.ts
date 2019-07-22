@@ -1,7 +1,7 @@
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import {CanchaEntity} from "../cancha/cancha.entity";
 import {ReservaEntity} from "../reserva/reserva.entity";
-import {DetallereservaEntity} from "../detallereserva/detallereserva.entity";
+
 
 
 
@@ -39,7 +39,7 @@ export class ClienteEntity{
     })
     direccionCliente:string;
 
-    @ManyToMany(type => ReservaEntity, reserva=>reserva.cliente)
+    @OneToMany(type => ReservaEntity, reserva=>reserva.cliente)
     reserva:ReservaEntity[]
 
 

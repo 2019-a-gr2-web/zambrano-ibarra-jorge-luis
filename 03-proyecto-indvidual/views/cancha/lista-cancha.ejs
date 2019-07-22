@@ -51,12 +51,12 @@
                                 <a href="/aventura/cancha/editar/<%= cancha.idCancha %>">
                                     <input id="idCancha" name="idCancha" type="number"
                                            value="<%= cancha.idCancha %>" hidden>
-                                    <button>Editar</button>
+                                    <button class="btn btn-block btn-dark">Editar</button>
                                 </a>
                                 <form action="/aventura/cancha/eliminar" method="post">
                                     <input id="idCancha" name="idCancha" type="number"
                                            value="<%= cancha.idCancha %>" hidden>
-                                    <button type="submit">Borrar</button>
+                                    <button class="btn btn-block btn-danger" type="submit">Borrar</button>
                                 </form>
                             </td>
                         </tr>
