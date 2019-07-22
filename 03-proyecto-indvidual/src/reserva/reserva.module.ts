@@ -3,6 +3,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import {ReservaEntity} from "./reserva.entity";
 import {ReservaController} from "./reserva.controller";
 import {ReservaService} from "./reserva.service";
+import {ClienteEntity} from "../cliente/cliente.entity";
+import {ClienteService} from "../cliente/cliente.service";
+import {CanchaService} from "../cancha/cancha.service";
+import {CanchaEntity} from "../cancha/cancha.entity";
 
 
 
@@ -12,7 +16,10 @@ import {ReservaService} from "./reserva.service";
     imports:[
         TypeOrmModule.forFeature(
             [
-                ReservaEntity       // PRIMERO ES LA ENTIDAD
+                ReservaEntity,
+                ClienteEntity,
+                CanchaEntity
+                // PRIMERO ES LA ENTIDAD
             ],
             'default'   // SEGUNDO ES EL NOMBRE DE LA CONEXION
         )
@@ -21,10 +28,14 @@ import {ReservaService} from "./reserva.service";
         ReservaController
     ], //Controladores
     providers:[
-        ReservaService
+        ReservaService,
+        ClienteService,
+        CanchaService
     ],   //Servicios
     exports:[
-        ReservaService
+        ReservaService,
+        ClienteService,
+        CanchaService
     ]    //Exportar los Servicios
 })
 export class ReservaModule

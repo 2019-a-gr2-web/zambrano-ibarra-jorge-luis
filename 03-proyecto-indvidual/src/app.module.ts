@@ -6,8 +6,6 @@ import {CanchaEntity} from "./cancha/cancha.entity";
 import {CanchaModule} from "./cancha/cancha.module";
 import {ClienteEntity} from "./cliente/cliente.entity";
 import {ClienteModule} from "./cliente/cliente.module";
-import {DetallereservaModule} from "./detallereserva/detallereserva.module";
-import {DetallereservaEntity} from "./detallereserva/detallereserva.entity";
 import {ReservaEntity} from "./reserva/reserva.entity";
 import {ReservaModule} from "./reserva/reserva.module";
 
@@ -24,7 +22,6 @@ import {ReservaModule} from "./reserva/reserva.module";
             entities: [
                 CanchaEntity,
                 ClienteEntity,
-                DetallereservaEntity,
                 ReservaEntity
             ],
             synchronize: true,
@@ -33,7 +30,6 @@ import {ReservaModule} from "./reserva/reserva.module";
         }),
         CanchaModule,
         ClienteModule,
-        DetallereservaModule,
         ReservaModule
     ],
     controllers: [AppController],

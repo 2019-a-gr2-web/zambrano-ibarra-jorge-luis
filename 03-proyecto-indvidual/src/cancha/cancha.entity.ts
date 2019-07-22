@@ -1,5 +1,5 @@
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import {DetallereservaEntity} from "../detallereserva/detallereserva.entity";
+import {ReservaEntity} from "../reserva/reserva.entity";
 
 
 
@@ -32,7 +32,10 @@ export class CanchaEntity{
     })
     metroscCancha:number;
 
-    @ManyToMany(type => DetallereservaEntity, detalle=>detalle.cancha)
-    detalle:DetallereservaEntity[];
+    @OneToMany(type => ReservaEntity, reserva=>reserva.cliente)
+    reserva:ReservaEntity[]
+
+
+
 
 }

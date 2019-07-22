@@ -4,11 +4,11 @@ import {ClienteService} from "./cliente.service";
 import {Tragos} from "../../../01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos";
 import {TragosCreateDto} from "../../../01-http/02-servidor-web-nodejs/api-web/src/tragos/dto/tragos.create.dto";
 import {Body} from "@nestjs/common/decorators/http/route-params.decorator";
-import {Cliente} from "./interfaces/cliente";
 import {ClienteCreateDto} from "./dto/cliente.create.dto";
 import {validate} from "class-validator";
 import {ClienteEntity} from "./cliente.entity";
 import {Like} from "typeorm";
+import {ClienteUpdateDto} from "./dto/cliente.update.dto";
 
 
 @Controller('aventura/cliente')
@@ -161,11 +161,41 @@ export class ClienteController{
     ) {
         cliente.idCliente = +idCliente;
 
-        await this._clienteServices.actualizar(+idCliente, cliente);
+
+        let clienteAValidar = new ClienteUpdateDto();
+
+        clienteAValidar.nombreCliente = cliente.nombreCliente;
+        clienteAValidar.cedulaCliente = (cliente.cedulaCliente);
+        clienteAValidar.telefonoCliente = Number(cliente.telefonoCliente);
+        clienteAValidar.direccionCliente = cliente.direccionCliente;
+
+
+        console.log(cliente);
+        try {
+            const errores = await validate(clienteAValidar);
+            if (errores.length > 0) {
+                console.error(errores);
+
+            } else {
+
+                const respuestaActualizar = await this._clienteServices.actualizar(+idCliente, cliente);
+                console.log('RESPUESTA: ', respuestaActualizar);
+                response.redirect('/aventura/cliente/lista');
+
+
+            }
+        } catch
+            (e) {
+            console.error(e);
+            response.status(500);
+            response.send({mensaje: 'Error', codigo: 500});
+        }
 
 
 
-        response.redirect('/aventura/cliente/lista');
+
+
+
 
     }
 

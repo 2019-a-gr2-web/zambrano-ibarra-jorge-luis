@@ -1,7 +1,7 @@
-import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {CanchaEntity} from "../cancha/cancha.entity";
 import {ClienteEntity} from "../cliente/cliente.entity";
-import {DetallereservaEntity} from "../detallereserva/detallereserva.entity";
+import {IsOptional} from "class-validator";
 
 
 
@@ -18,11 +18,29 @@ export class ReservaEntity{
     })
     fechaReserva:Date;
 
-    @ManyToMany(type => ClienteEntity, cliente=>cliente.reserva)
-    @JoinTable()
-    cliente:ClienteEntity[]
+
+    @Column({
+        type:'integer',
+        name:'hora_inicial'
+    })
+    horaInicial:number;
+
+    @Column({
+        type:'integer',
+        name:'hora_final'
+    })
+    horaFinal:number;
 
 
-    @OneToMany(type=>DetallereservaEntity, detalle=>detalle.res)
-    detalle: DetallereservaEntity[]
+    @ManyToOne(type => ClienteEntity, cliente=>cliente.reserva)
+    @JoinColumn({ name: "idCliente" })
+    cliente:ClienteEntity
+
+
+
+    @ManyToOne(type => CanchaEntity, cancha=>cancha.reserva)
+    @JoinColumn({ name: "idCancha" })
+    cancha:CanchaEntity
+
+
 }
