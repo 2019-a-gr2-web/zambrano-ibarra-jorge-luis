@@ -14,33 +14,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cancha/cancha.entity.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/cliente.entity.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="-144">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
-                <element signature="e#0#110#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
+                <element signature="n#requireActual#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/cliente.module.ts">
+        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/reserva.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="372">
+              <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1240">
+              <caret line="49" column="23" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/login.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -49,40 +72,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/cliente.service.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="459">
+              <caret line="31" column="97" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="97" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
+                <element signature="e#0#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/dto/reserva.update.dto.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/reserva.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3283">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/crear-editar-reserva.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="46" column="109" selection-start-line="46" selection-start-column="109" selection-end-line="46" selection-end-column="109" />
+            <state>
+              <folding>
+                <element signature="e#0#74#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/lista-reserva.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="1020">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
@@ -109,7 +116,7 @@
         <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/dto/cliente.create.dto.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -127,8 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>gestion</find>
-      <find>gesti</find>
       <find>gestiont</find>
       <find>get</find>
       <find>borr</find>
@@ -157,6 +162,8 @@
       <find>cedulaCliente</find>
       <find>cliente</find>
       <find>act</find>
+      <find>where</find>
+      <find>zapatos</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/03-proyecto-indvidual/src/detallereserva/detallereserva.module.ts" />
         <option value="$PROJECT_DIR$/03-proyecto-indvidual/views/fragments/footer.ejs" />
         <option value="$PROJECT_DIR$/03-proyecto-indvidual/publico/general.css" />
         <option value="$PROJECT_DIR$/03-proyecto-indvidual/src/main.ts" />
@@ -192,7 +198,6 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/juego/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/juego/juego.module.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/juego/juego.gateway.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/chat/chat.gateway.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/juego.html" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/index.html" />
@@ -216,13 +221,15 @@
         <option value="$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/reserva.controller.ts" />
         <option value="$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/lista-reserva.ejs" />
         <option value="$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/crear-editar-reserva.ejs" />
+        <option value="$PROJECT_DIR$/../mov-zambrano-ibarra-jorge-luis/05-Proyecto/Backend/canchas/package.json" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/chat/chat.gateway.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="675" />
-    <option name="width" value="700" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -253,7 +260,7 @@
               <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
               <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="01-calculadora-cookie" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
@@ -261,6 +268,24 @@
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
               <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
               <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="publico" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="publico" type="462c0819:PsiDirectoryNode" />
+              <item name="websockets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="sessions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
@@ -273,6 +298,41 @@
             <path>
               <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="juego" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tragos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
               <item name="03-proyecto-indvidual" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,6 +340,13 @@
               <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
               <item name="03-proyecto-indvidual" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-zambrano-ibarra-jorge-luis" type="462c0819:PsiDirectoryNode" />
+              <item name="03-proyecto-indvidual" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cancha" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-zambrano-ibarra-jorge-luis" type="b2602c69:ProjectViewProjectNode" />
@@ -341,6 +408,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -351,7 +419,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\ZAMBRANO JORGE\Documents\GITHUB\web-zambrano-ibarra-jorge-luis\01-http\02-servidor-web-nodejs\api-web\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="D:\Documentos\Github\web-zambrano-ibarra-jorge-luis\03-proyecto-indvidual\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Documentos\Github\web-zambrano-ibarra-jorge-luis\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -465,12 +533,25 @@
       <workItem from="1563641502910" duration="105000" />
       <workItem from="1563648353642" duration="13612000" />
       <workItem from="1563676595984" duration="600000" />
-      <workItem from="1563738661387" duration="18120000" />
+      <workItem from="1563738661387" duration="18735000" />
+      <workItem from="1563810475989" duration="1844000" />
+      <workItem from="1563836468481" duration="143000" />
+      <workItem from="1563912496942" duration="623000" />
+      <workItem from="1563930075208" duration="888000" />
+      <workItem from="1563992556234" duration="599000" />
+      <workItem from="1564008028827" duration="25000" />
+      <workItem from="1564018371402" duration="599000" />
+      <workItem from="1564063524793" duration="707000" />
+      <workItem from="1564092725798" duration="66000" />
+      <workItem from="1564182827384" duration="729000" />
+      <workItem from="1564192207525" duration="18000" />
+      <workItem from="1564194748223" duration="840000" />
+      <workItem from="1564197410572" duration="5288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368473000" />
+    <option name="totallyTimeSpent" value="381457000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,8 +564,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32848644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32848644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -496,8 +578,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32941177" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7818903" visible="true" weight="0.39106146" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21810971" side_tool="true" weight="0.3170391" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.21810971" side_tool="true" weight="0.3170391" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.7818903" visible="true" weight="0.20391062" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -528,52 +610,13 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/juego/src/app.controller.ts" />
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/juego/src/main.ts" />
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/juego.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/socket.io.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139315">
           <caret line="8195" selection-start-line="8195" selection-end-line="8195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,23 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/chat/chat.gateway.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="89" column="13" selection-start-line="81" selection-start-column="15" selection-end-line="89" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -638,25 +664,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/cliente/menu-cliente.ejs">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="31" column="97" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/dto/tragos.create.dto.ts">
       <provider selected="true" editor-type-id="text-editor" />
@@ -692,36 +699,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/detallereserva/detallereserva.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="252" column="1" selection-start-line="252" selection-start-column="1" selection-end-line="252" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#243#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/detallereserva/detallereserva.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/detallereserva/detallereserva.controller.ts" />
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/detallereserva/detallereserva.entity.ts" />
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/app.controller.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -756,16 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/reserva.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/dto/cliente.update.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -780,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/cancha/crear-editar-cancha.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/cancha/lista-cancha.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -798,16 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="58" column="77" selection-start-line="58" selection-start-column="77" selection-end-line="58" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cancha/cancha.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,24 +799,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cancha/cancha.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        <state relative-caret-position="323">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="e#0#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/dto/reserva.update.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/cliente.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="17">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#110#0" expanded="true" />
@@ -883,11 +828,120 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/cliente.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="595">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/dto/reserva.update.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/crear-editar-reserva.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="109" selection-start-line="46" selection-start-column="109" selection-end-line="46" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cancha/cancha.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/reserva.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/juego.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2074">
+          <caret line="122" column="33" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/websockets/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="99" column="41" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/cancha/crear-editar-cancha.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="58" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mov-zambrano-ibarra-jorge-luis/05-Proyecto/Backend/canchas/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/chat/chat.gateway.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="31" column="97" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/lista-reserva.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
@@ -901,28 +955,55 @@
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/cliente/dto/cliente.create.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <element signature="n#requireActual#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/src/reserva/reserva.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3283">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+        <state relative-caret-position="372">
+          <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/lista-reserva.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="-1240">
+          <caret line="49" column="23" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#243#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-proyecto-indvidual/views/reserva/crear-editar-reserva.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="46" column="109" selection-start-line="46" selection-start-column="109" selection-end-line="46" selection-end-column="109" />
+        <state relative-caret-position="136">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
