@@ -20,4 +20,12 @@ export class ChatGateway{
         client.broadcast.emit('saludaron',data);
         return 'Hola ' + data.nombre;
     }
+    @SubscribeMessage('holaMundo2')
+    holaMundo2(client: Client |any, data: any){
+        console.log(data);
+        console.log('Nos hacen la peticion');
+        console.log(this.server);
+        client.broadcast.emit('saludaron',data);
+        return 'Hola ' + data.nombre;
+    }
 }
